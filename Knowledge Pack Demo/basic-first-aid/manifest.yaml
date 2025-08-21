@@ -1,0 +1,56 @@
+# manifest.yaml
+id: basic-first-aid
+name: Basic First Aid
+version: 1.0.0
+domain: first_aid
+default_locale: en
+locales:
+  - en
+  - hi
+entrypoints:
+  en: locale/en/index.md
+  hi: locale/hi/index.md
+topic_index:
+  - id: bleeding
+    title: Bleeding Control
+    files:
+      en: locale/en/topics/bleeding.md
+      hi: locale/hi/topics/bleeding.md
+  - id: burns
+    title: Burns
+    files:
+      en: locale/en/topics/burns.md
+  - id: choking
+    title: Choking
+    files:
+      en: locale/en/topics/choking.md
+glossary:
+  en: locale/en/glossary.yaml
+assets:
+  imgs:
+    - assets/imgs/bleeding-pressure.svg
+    - assets/imgs/burns-cool-water.svg
+supports:
+  voice: true
+  qna_style: steps
+compat:
+  model_min: "gpt-oss:20b"
+  quantization:
+    - int4
+    - int8
+  app_version_min: "0.3.0"
+safety:
+  refusal_mode: substring
+  refusals:
+    - trigger: "diagnose|prescribe|dose|medication"
+      response: "I can’t provide diagnoses or medication dosing. For medicines, consult a clinician."
+    - trigger: "surgery|stitch"
+      response: "Procedures must be done by trained clinicians. Seek medical help."
+  escalation_examples:
+    - condition: "Uncontrolled bleeding >10 minutes after firm pressure"
+      message: "Seek urgent medical help now."
+    - condition: "Burns larger than the person’s palm or on face/genitals"
+      message: "Seek urgent medical help now."
+license: CC-BY-4.0
+pack_file: pack.json
+sha256: "CHANGE-ME"
