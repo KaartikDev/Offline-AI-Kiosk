@@ -1,0 +1,94 @@
+role: "hurricane disaster response"
+location: "Tampa, Florida"
+
+pack_id: "tampa_hurr_transport_comm_v1"
+title: "Post-hurricane: Communication & Transportation"
+version: "1.0.0"
+updated_at: "2025-08-22T00:00:00Z"
+language: "en"
+locale: "en-US"
+area_code: "US-FL-TAMPA"
+license: "CC-BY-4.0"
+
+display:
+  description: "Staying informed and moving safely after a hurricane: safer routes, debris, flooding."
+
+intents:
+  patterns:
+    - "road closed"
+    - "safe route"
+    - "debris"
+    - "flooded"
+    - "radio"
+    - "communications"
+  embedding_seeds_text:
+    - "How to find safer routes and communicate during post-hurricane recovery, including dealing with debris and standing water."
+  embed_meta:
+    model: "ollama/gte-small"
+    dim: 384
+    normalize: true
+
+topics:
+  - id: "good_roads"
+    title: "Good roads after storms"
+  - id: "debris_flooding"
+    title: "Dealing with debris and flooding"
+
+files:
+  - path: "docs/good_roads.md"
+    topic_id: "good_roads"
+  - path: "docs/debris_flooding.md"
+    topic_id: "debris_flooding"
+
+chunking:
+  default:
+    method: "sliding_window"
+    chars: 900
+    overlap: 200
+
+glossary:
+  - term: "CO"
+    definition: "Carbon monoxide; a deadly, odorless gas from engines."
+
+retrieval:
+  lexical:
+    jaccard_stopwords: ["the","a","and","of","for","to"]
+    bm25:
+      enabled: true
+      k1: 1.2
+      b: 0.75
+  semantic:
+    model: "ollama/gte-small"
+    normalize: true
+  hybrid_weights:
+    routing:
+      lexical: 0.35
+      semantic: 0.65
+    probe:
+      lexical: 0.60
+      semantic: 0.40
+    rank:
+      lexical: 0.50
+      semantic: 0.50
+  thresholds:
+    probe_score_min: 0.33
+    rerank_min_score: 0.70
+    min_coverage: 0.60
+
+requires_sources:
+
+
+safety_rules:
+  hazard:
+    - "downed line"
+    - "standing water"
+    - "fast-moving water"
+
+tools_whitelist: ["search_knowledge","translate","math"]
+prompt_template: |
+  You are a post-hurricane mobility assistant for <AREA>. Give practical steps for safer travel and comms.
+  Warn clearly about downed lines and floodwater dangers. Cite [1], [2] if using references.
+risk_level: "high"
+freshness_policy:
+  prefer_updated_after: "2024-01-01"
+  stale_warning: "Local details change quickly after storms; verify with authorities."

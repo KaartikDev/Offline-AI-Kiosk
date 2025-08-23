@@ -1,0 +1,121 @@
+role: "hurricane disaster response"
+location: "Tampa, Florida"
+
+pack_id: "tampa_hurr_first_aid_v1"
+title: "Post-hurricane: Basic First Aid"
+version: "1.0.0"
+updated_at: "2025-08-22T00:00:00Z"
+language: "en"
+locale: "en-US"
+area_code: "US-FL-TAMPA"
+license: "CC-BY-4.0"
+
+display:
+  description: "Immediate care for injuries after a hurricane; when to seek urgent help."
+
+intents:
+  patterns:
+    - "first aid"
+    - "cut"
+    - "burn"
+    - "fracture"
+    - "head injury"
+    - "laceration"
+    - "bleeding"
+  embedding_seeds_text:
+    - "Basic first aid after a hurricane: bleeding control, burns, fractures, head injury red flags."
+    - "When to seek urgent care and how to protect against infection in low-resource settings."
+  embed_meta:
+    model: "ollama/gte-small"
+    dim: 384
+    normalize: true
+
+topics:
+  - id: "cuts_scrapes"
+    title: "Cuts and scrapes"
+  - id: "burns"
+    title: "Burns"
+  - id: "fractures"
+    title: "Bruises & fractures"
+  - id: "head_trauma"
+    title: "Head trauma"
+  - id: "lacerations"
+    title: "Lacerations"
+  - id: "nearby_resources"
+    title: "Nearby resources"
+
+files:
+  - path: "docs/cuts_scrapes.md"
+    topic_id: "cuts_scrapes"
+  - path: "docs/burns.md"
+    topic_id: "burns"
+  - path: "docs/fractures.md"
+    topic_id: "fractures"
+  - path: "docs/head_trauma.md"
+    topic_id: "head_trauma"
+  - path: "docs/lacerations.md"
+    topic_id: "lacerations"
+  - path: "docs/nearby_resources.md"
+    topic_id: "nearby_resources"
+
+chunking:
+  default:
+    method: "sliding_window"
+    chars: 900
+    overlap: 200
+
+glossary:
+  - term: "CO"
+    definition: "Carbon monoxide; a deadly, odorless gas from engines."
+
+retrieval:
+  lexical:
+    jaccard_stopwords: ["the","a","and","of","for","to"]
+    bm25:
+      enabled: true
+      k1: 1.2
+      b: 0.75
+  semantic:
+    model: "ollama/gte-small"
+    normalize: true
+  hybrid_weights:
+    routing:
+      lexical: 0.35
+      semantic: 0.65
+    probe:
+      lexical: 0.60
+      semantic: 0.40
+    rank:
+      lexical: 0.50
+      semantic: 0.50
+  thresholds:
+    probe_score_min: 0.33
+    rerank_min_score: 0.70
+    min_coverage: 0.60
+
+requires_sources:
+  - "cuts_scrapes"
+  - "burns"
+  - "fractures"
+  - "head_trauma"
+  - "lacerations"
+
+safety_rules:
+  medical_emergency:
+    - "not breathing"
+    - "unconscious"
+    - "severe bleeding"
+    - "signs of stroke"
+    - "signs of sepsis"
+  hazard:
+    - "live wire"
+    - "smell gas"
+
+tools_whitelist: ["search_knowledge","translate","math"]
+prompt_template: |
+  You are a first-aid assistant for <AREA>. Put life-threatening conditions first, then safe, simple steps.
+  State red flags and when to seek emergency care. Keep materials low-cost. Cite [1], [2] when relevant.
+risk_level: "high"
+freshness_policy:
+  prefer_updated_after: "2024-01-01"
+  stale_warning: "Local details change quickly after storms; verify with authorities."

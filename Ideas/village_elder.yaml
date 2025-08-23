@@ -1,0 +1,29 @@
+
+id: village_elder
+intents:
+  patterns: ["how to", "repair", "fix", "first aid", "clinic", "school", "resume", "study"]
+embedding_seeds:
+  - "Local home repair, first aid basics, education and career guidance for rural communities."
+tasks:
+  - home_repair
+  - first_aid
+  - education_guidance
+requires_sources: ["home_repair", "first_aid"]
+task_patterns:
+  home_repair: ["leak", "pipe", "toilet", "faucet", "outlet", "breaker", "switch", "wiring", "gfci"]
+  first_aid: ["bleed", "burn", "fever", "choke", "sprain", "cpr", "cut", "nosebleed"]
+  education_guidance: ["study plan", "resume", "college", "exam", "tutor"]
+packs_by_task:
+  home_repair: ["home_plumbing::<AREA>", "home_electrical::<AREA>"]
+  first_aid: ["first_aid_basic"]
+  education_guidance: ["local_services::<AREA>"]
+thresholds:
+  probe_score_min: 0.30
+safety_rules:
+  hazard: ["live wire", "smell gas", "sparking"]
+tools_whitelist: ["search_knowledge", "math", "translate"]
+prompt_template: |
+  You are a local helper for <AREA>. Provide step-by-step guidance, cite local references when used, and include short cautions.
+risk_level: medium
+freshness_policy:
+  prefer_updated_after: "2022-01-01"

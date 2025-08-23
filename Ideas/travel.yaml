@@ -1,0 +1,28 @@
+
+id: travel
+intents:
+  patterns: ["itinerary", "visa", "packing", "budget", "train", "bus", "transit", "museum", "restaurant"]
+embedding_seeds:
+  - "General travel planning, timeless safety and packing advice, cultural tips."
+tasks:
+  - itinerary_planning
+  - packing_safety
+  - transit_tips
+requires_sources: []
+task_patterns:
+  itinerary_planning: ["day", "itinerary", "route", "must see", "plan"]
+  packing_safety: ["packing", "safety", "scam", "wallet", "pickpocket"]
+  transit_tips: ["train", "bus", "metro", "transit", "ticket"]
+packs_by_task:
+  itinerary_planning: ["offline_guides::<AREA>"]
+  packing_safety: ["travel_safety_basics"]
+  transit_tips: ["offline_transit::<AREA>"]
+thresholds:
+  probe_score_min: 0.25
+safety_rules: {}
+tools_whitelist: ["search_knowledge", "math", "translate"]
+prompt_template: |
+  You are an offline travel helper. Prefer timeless guidance; add a freshness warning if details might be outdated.
+risk_level: low
+freshness_policy:
+  prefer_updated_after: "2022-01-01"

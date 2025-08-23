@@ -1,0 +1,102 @@
+role: "hurricane disaster response"
+location: "Tampa, Florida"
+
+pack_id: "tampa_hurr_post_sustenance_v1"
+title: "Post-hurricane: Basic Sustenance"
+version: "1.0.0"
+updated_at: "2025-08-22T00:00:00Z"
+language: "en"
+locale: "en-US"
+area_code: "US-FL-TAMPA"
+license: "CC-BY-4.0"
+
+display:
+  description: "Safe water and food after a hurricane: boiling, disinfection, storage, spoilage."
+
+intents:
+  patterns:
+    - "boil water"
+    - "potable"
+    - "bleach"
+    - "food spoilage"
+    - "contamination"
+  embedding_seeds_text:
+    - "How to make water safe to drink after a hurricane using boiling, bleach, or filtration."
+    - "Food safety without power: refrigeration limits, cooking, contamination avoidance."
+  embed_meta:
+    model: "ollama/gte-small"
+    dim: 384
+    normalize: true
+
+topics:
+  - id: "clean_water"
+    title: "Clean water"
+  - id: "clean_food"
+    title: "Clean food"
+  - id: "food_preservation"
+    title: "Food preservation"
+
+files:
+  - path: "docs/clean_water.md"
+    topic_id: "clean_water"
+  - path: "docs/clean_food.md"
+    topic_id: "clean_food"
+  - path: "docs/food_preservation.md"
+    topic_id: "food_preservation"
+
+chunking:
+  default:
+    method: "sliding_window"
+    chars: 900
+    overlap: 200
+
+glossary:
+  - term: "CO"
+    definition: "Carbon monoxide; a deadly, odorless gas from engines."
+
+retrieval:
+  lexical:
+    jaccard_stopwords: ["the","a","and","of","for","to"]
+    bm25:
+      enabled: true
+      k1: 1.2
+      b: 0.75
+  semantic:
+    model: "ollama/gte-small"
+    normalize: true
+  hybrid_weights:
+    routing:
+      lexical: 0.35
+      semantic: 0.65
+    probe:
+      lexical: 0.60
+      semantic: 0.40
+    rank:
+      lexical: 0.50
+      semantic: 0.50
+  thresholds:
+    probe_score_min: 0.33
+    rerank_min_score: 0.70
+    min_coverage: 0.60
+
+requires_sources:
+  - "clean_water"
+  - "clean_food"
+
+safety_rules:
+  hazard:
+    - "generator indoors"
+    - "smell gas"
+  medical_emergency:
+    - "severe dehydration"
+    - "vomiting blood"
+
+tools_whitelist: ["search_knowledge","translate","math"]
+prompt_template: |
+  You are a post-hurricane sustenance assistant for <AREA>. Put life-safety first, then numbered steps.
+  Be specific about volumes and times for water disinfection. Cite [1], [2] when using references.
+  If local notices are missing, say so and give universal safety steps.
+risk_level: "high"
+freshness_policy:
+  prefer_updated_after: "2024-01-01"
+  stale_warning: "Local details change quickly after storms; verify with authorities."

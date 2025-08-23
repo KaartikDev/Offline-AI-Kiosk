@@ -1,0 +1,37 @@
+
+id: disaster_response
+intents:
+  patterns: ["evacuate", "shelter", "boil water", "generator", "smell gas", "downed line", "rising water", "wildfire", "smoke", "earthquake", "flood", "hurricane"]
+embedding_seeds:
+  - "Emergency guidance during disasters: evacuation routes, shelters, utilities safety, water sanitation, first aid."
+tasks:
+  - evac_shelter
+  - utilities_safety
+  - water_food_sanitation
+  - medical_steps
+  - cleanup
+requires_sources: ["evac_shelter", "utilities_safety", "water_food_sanitation", "medical_steps"]
+task_patterns:
+  evac_shelter: ["evacuate", "shelter", "warming center", "cooling center", "route", "road closed"]
+  utilities_safety: ["generator", "carbon monoxide", "smell gas", "downed", "breaker", "shut off", "live wire"]
+  water_food_sanitation: ["boil water", "potable", "bleach", "latrine", "purify", "diarrhea", "dehydration"]
+  medical_steps: ["bleeding", "burn", "fracture", "cpr", "choking", "head injury", "nosebleed"]
+  cleanup: ["mold", "ash", "debris", "disposal", "soot"]
+packs_by_task:
+  evac_shelter: ["evac_routes::<AREA>", "shelters::<AREA>"]
+  utilities_safety: ["generator_safety", "gas_leak_safety", "downed_power_lines::<AREA>"]
+  water_food_sanitation: ["boil_water::<AREA>", "water_disinfection"]
+  medical_steps: ["first_aid_basic"]
+  cleanup: ["cleanup_mold", "cleanup_ash", "debris_rules::<AREA>"]
+thresholds:
+  probe_score_min: 0.33
+safety_rules:
+  medical_emergency: ["not breathing", "unconscious", "severe bleeding", "trapped"]
+  hazard: ["smell gas", "downed line", "live wire", "rising water", "active fire", "sparking"]
+tools_whitelist: ["search_knowledge", "math", "translate"]
+prompt_template: |
+  You are a disaster-response assistant for <AREA>. Put life-safety first, then steps, then where/when. Cite [1],[2] where relevant.
+  If info is missing, say so and provide universal safety steps.
+risk_level: high
+freshness_policy:
+  prefer_updated_after: "2023-01-01"

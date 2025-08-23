@@ -1,0 +1,225 @@
+name: "Eastern Bihar – First Aid & Community Health | पूर्वी बिहार – प्राथमिक चिकित्सा"
+version: "0.2.0"
+date: "2025-08-23"
+
+index_of_topics:
+  - id: bleed-control
+    title: "Severe Bleeding Control | अत्यधिक रक्तस्राव नियंत्रण"
+    core_files:
+      - id: guide-bleed-overview
+        path: "core/hi_en/bleeding_control_overview.hi_en.md"
+        citations: [who-bec]
+      - id: guide-bleed-tourniquet
+        path: "core/hi_en/bleeding_tourniquet_steps.hi_en.md"
+        citations: [who-bec, sphere]
+      - id: guide-bleed-local
+        path: "core/local/bleeding_control_local_practices.md"
+        citations: [ndma-flood]
+
+  - id: fracture-splint
+    title: "Suspected Fracture & Splinting | हड्डी टूटना व स्प्लिंटिंग"
+    core_files:
+      - id: guide-fracture-overview
+        path: "core/hi_en/fracture_overview.hi_en.md"
+        citations: [who-bec]
+      - id: guide-splint-materials
+        path: "core/hi_en/splint_with_local_materials.hi_en.md"
+        citations: [sphere]
+      - id: guide-fracture-referral
+        path: "core/hi_en/fracture_when_to_refer.hi_en.md"
+        citations: [who-bec]
+
+  - id: burns
+    title: "Burns (Flame/Scald/Electrical) | जलन (आग/गर्म पानी/बिजली)"
+    core_files:
+      - id: guide-burns-first
+        path: "core/hi_en/burns_first_steps.hi_en.md"
+        citations: [who-bec]
+      - id: guide-burns-dont
+        path: "core/hi_en/burns_dos_and_donts.hi_en.md"
+        citations: [sphere]
+      - id: guide-burns-referral
+        path: "core/hi_en/burns_referral_criteria.hi_en.md"
+        citations: [who-bec]
+
+  - id: heat-illness
+    title: "Heat Exhaustion & Heatstroke | लू व हीटस्ट्रोक"
+    core_files:
+      - id: guide-heat-overview
+        path: "core/hi_en/heat_illness_overview.hi_en.md"
+        citations: [ndma-heat]
+      - id: guide-heat-cooling
+        path: "core/hi_en/heat_active_cooling.hi_en.md"
+        citations: [who-bec]
+      - id: guide-heat-local
+        path: "core/local/heat_illness_local_signs.md"
+        citations: [ndma-heat]
+
+  - id: snakebite
+    title: "Snakebite (Krait/Viper) | सर्पदंश (करैत/वायपर)"
+    core_files:
+      - id: guide-snakebite-first
+        path: "core/hi_en/snakebite_first_aid.hi_en.md"
+        citations: [who-searo-snakebite]
+      - id: guide-snakebite-donts
+        path: "core/hi_en/snakebite_dos_and_donts.hi_en.md"
+        citations: [who-searo-snakebite]
+      - id: guide-snakebite-transport
+        path: "core/hi_en/snakebite_transport.hi_en.md"
+        citations: [who-searo-snakebite]
+
+  - id: flood-wounds
+    title: "Flood-Related Wounds & Infection | बाढ़ के घाव व संक्रमण"
+    core_files:
+      - id: guide-flood-cuts
+        path: "core/hi_en/flood_cuts_cleaning.hi_en.md"
+        citations: [ndma-flood]
+      - id: guide-flood-infection
+        path: "core/hi_en/flood_infection_signs.hi_en.md"
+        citations: [icmr-lepto]
+      - id: guide-flood-tetanus
+        path: "core/hi_en/flood_tetanus_precautions.hi_en.md"
+        citations: [who-bec]
+
+  - id: diarrhea-ors
+    title: "Diarrhea, ORS & Zinc | दस्त, ओआरएस व जिंक"
+    core_files:
+      - id: guide-ors-mix
+        path: "core/hi_en/ors_homemade_recipe.hi_en.md"
+        citations: [unicef-ors]
+      - id: guide-ors-use
+        path: "core/hi_en/ors_usage_in_children.hi_en.md"
+        citations: [unicef-ors]
+      - id: guide-zinc
+        path: "core/hi_en/zinc_supplementation.hi_en.md"
+        citations: [unicef-ors]
+
+  - id: choking
+    title: "Choking (Adult/Child/Infant) | गला घुटना (वयस्क/बालक/शिशु)"
+    core_files:
+      - id: guide-choking-adult
+        path: "core/hi_en/choking_adult.hi_en.md"
+        citations: [who-bec]
+      - id: guide-choking-child
+        path: "core/hi_en/choking_child.hi_en.md"
+        citations: [who-bec]
+      - id: guide-choking-infant
+        path: "core/hi_en/choking_infant.hi_en.md"
+        citations: [who-bec]
+
+  - id: cpr
+    title: "Hands-Only CPR (Adult) | हैंड्स-ओनली सीपीआर (वयस्क)"
+    core_files:
+      - id: guide-cpr-steps
+        path: "core/hi_en/cpr_steps.hi_en.md"
+        citations: [who-bec]
+      - id: guide-cpr-checklist
+        path: "core/hi_en/cpr_quick_checklist.hi_en.md"
+        citations: [who-bec]
+
+  - id: maternal
+    title: "Maternal Red Flags (Pre-Referral) | मातृ आपात संकेत"
+    core_files:
+      - id: guide-maternal-signs
+        path: "core/hi_en/maternal_danger_signs.hi_en.md"
+        citations: [who-bec]
+      - id: guide-maternal-referral
+        path: "core/hi_en/maternal_referral_steps.hi_en.md"
+        citations: [sphere]
+
+  - id: poisoning
+    title: "Common Poisonings (Pesticides) | सामान्य विषाक्तता (कीटनाशक)"
+    core_files:
+      - id: guide-poison-overview
+        path: "core/hi_en/poisoning_overview.hi_en.md"
+        citations: [who-bec]
+      - id: guide-poison-firstaid
+        path: "core/hi_en/poisoning_first_aid.hi_en.md"
+        citations: [who-bec]
+
+  - id: animal-bites
+    title: "Dog Bite – Rabies First Aid | कुत्ते के काटने पर प्राथमिक चिकित्सा"
+    core_files:
+      - id: guide-rabies-first
+        path: "core/hi_en/rabies_first_steps.hi_en.md"
+        citations: [mohfw-rabies]
+      - id: guide-rabies-vaccine
+        path: "core/hi_en/rabies_vaccine_schedule.hi_en.md"
+        citations: [mohfw-rabies]
+
+assets:
+  - id: img-tourniquet
+    path: "assets/bleeding/tourniquet_step_diagram.png"
+    image_description: "Step-by-step improvised tourniquet using cloth and a stick."
+    citations: [who-bec]
+
+  - id: img-pressure
+    path: "assets/bleeding/direct_pressure.png"
+    image_description: "Apply firm direct pressure with clean cloth or sterile gauze."
+    citations: [who-bec]
+
+  - id: img-splint
+    path: "assets/fracture/basic_splint_bamboo.png"
+    image_description: "Immobilize with bamboo sticks and cloth ties."
+    citations: [who-bec, sphere]
+
+  - id: img-ors
+    path: "assets/diarrhea/ors_mixing.png"
+    image_description: "ORS home mix: 6 level tsp sugar + 1/2 level tsp salt in 1 liter clean water."
+    citations: [unicef-ors]
+
+  - id: img-heat
+    path: "assets/heat/evap_cooling_cloth.png"
+    image_description: "Evaporative cooling: wet cloths to neck/armpits/groin with fanning."
+    citations: [ndma-heat, who-bec]
+
+  - id: img-rabies
+    path: "assets/rabies/wound_wash.png"
+    image_description: "Wash bite with soap under running water for 15 minutes; seek vaccination."
+    citations: [mohfw-rabies]
+
+  - id: img-snakebite
+    path: "assets/snakebite/no-cut-no-suck.png"
+    image_description: "Do NOT cut, suck, ice, or tourniquet; immobilize and transport urgently."
+    citations: [who-searo-snakebite]
+
+citations:
+  - id: who-bec
+    title: "WHO Basic Emergency Care (B.E.C.)"
+    url: "https://www.who.int/emergencycare/publications/basic-emergency-care"
+    license: "CC BY-NC-SA (verify)"
+
+  - id: who-searo-snakebite
+    title: "WHO SEARO – Snakebite Management"
+    url: "https://www.who.int/searo"
+    license: "Open access; verify"
+
+  - id: unicef-ors
+    title: "UNICEF/WHO – ORS & Zinc in Diarrhea"
+    url: "https://www.unicef.org/health"
+    license: "Open access; verify"
+
+  - id: ndma-flood
+    title: "NDMA India – Flood Health & Safety"
+    url: "https://ndma.gov.in"
+    license: "Open government resource; verify"
+
+  - id: ndma-heat
+    title: "NDMA India – Heat Wave Guidelines"
+    url: "https://ndma.gov.in"
+    license: "Open government resource; verify"
+
+  - id: icmr-lepto
+    title: "ICMR – Leptospirosis Guidelines"
+    url: "https://main.icmr.nic.in"
+    license: "Open access; verify"
+
+  - id: mohfw-rabies
+    title: "MoHFW India – Rabies Prophylaxis Guidelines"
+    url: "https://main.mohfw.gov.in"
+    license: "Open government resource; verify"
+
+  - id: sphere
+    title: "Sphere Handbook – Health Standards"
+    url: "https://spherestandards.org"
+    license: "Open access; verify"
