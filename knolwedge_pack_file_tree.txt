@@ -1,0 +1,86 @@
+first_aid_pack/
+├─ manifest.yaml
+├─ core/
+│  ├─ bleed-control/
+│  │  ├─ hi_en/
+│  │  │  ├─ bleeding_control_overview.md
+│  │  │  ├─ bleeding_tourniquet_steps.pdf
+│  │  │  └─ bleeding_control_quickref.docx
+│  │  └─ local/
+│  │     └─ bleeding_control_local_practices.txt
+│  ├─ fracture-splint/
+│  │  ├─ hi_en/
+│  │  │  ├─ fracture_overview.md
+│  │  │  ├─ splint_with_local_materials.pdf
+│  │  │  └─ fracture_when_to_refer.md
+│  │  └─ local/
+│  │     └─ fracture_referral_paths_bihar.md
+│  ├─ burns/
+│  │  ├─ hi_en/
+│  │  │  ├─ burns_first_steps.md
+│  │  │  ├─ burns_dos_and_donts.md
+│  │  │  └─ burns_referral_criteria.pdf
+│  │  └─ local/
+│  │     └─ burns_local_facilities.txt
+│  ├─ heat-illness/
+│  │  ├─ hi_en/
+│  │  │  ├─ heat_illness_overview.md
+│  │  │  ├─ heat_active_cooling.pdf
+│  │  │  └─ heat_quick_ref.docx
+│  │  └─ local/
+│  │     └─ heat_illness_local_signs.md
+│  ├─ snakebite/
+│  │  ├─ hi_en/
+│  │  │  ├─ snakebite_first_aid.md
+│  │  │  ├─ snakebite_dos_and_donts.md
+│  │  │  └─ snakebite_transport.pdf
+│  │  └─ local/
+│  │     └─ snakebite_hotspots_clinics_bihar.md
+│  ├─ flood-wounds/
+│  │  ├─ hi_en/
+│  │  │  ├─ flood_cuts_cleaning.docx
+│  │  │  ├─ flood_infection_signs.md
+│  │  │  └─ flood_tetanus_precautions.md
+│  │  └─ local/
+│  │     └─ flood_wound_care_supply_list.txt
+│  ├─ diarrhea-ors/
+│  │  ├─ hi_en/
+│  │  │  ├─ ors_homemade_recipe.md
+│  │  │  ├─ ors_usage_in_children.pdf
+│  │  │  └─ zinc_supplementation.md
+│  │  └─ local/
+│  │     └─ safe_water_sources_bihar.md
+│  ├─ choking/hi_en/
+│  │  ├─ choking_adult.md
+│  │  ├─ choking_child.md
+│  │  └─ choking_infant.pdf
+│  ├─ cpr/hi_en/
+│  │  ├─ cpr_steps.md
+│  │  └─ cpr_quick_checklist.docx
+│  ├─ maternal/hi_en/
+│  │  ├─ maternal_danger_signs.md
+│  │  └─ maternal_referral_steps.pdf
+│  └─ poisoning/hi_en/
+│     ├─ poisoning_overview.md
+│     └─ poisoning_first_aid.md
+├─ assets/
+│  ├─ bleeding/
+│  │  ├─ tourniquet_step_diagram.png
+│  │  └─ direct_pressure.png
+│  ├─ fracture/basic_splint_bamboo.png
+│  ├─ diarrhea/ors_mixing.png
+│  ├─ heat/evap_cooling_cloth.png
+│  ├─ rabies/wound_wash.png
+│  └─ snakebite/no-cut-no-suck.png
+├─ vector_db/
+│  ├─ text/
+│  │  ├─ embeddings.jsonl     # precomputed vectors for text chunks
+│  │  ├─ index.bin            # ANN index (e.g., FAISS/HNSW/Annoy)
+│  │  └─ meta.json            # model name, dim, chunking settings
+│  └─ images/
+│     ├─ captions.jsonl       # {image_id, description, citations[]}
+│     ├─ embeddings.jsonl     # precomputed image/text vectors
+│     ├─ index.bin
+│     └─ meta.json
+└─ citations/
+   └─ sources.md              # optional human-readable notes
