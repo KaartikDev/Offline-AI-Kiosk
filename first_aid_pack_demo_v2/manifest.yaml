@@ -5,10 +5,10 @@ locales: ["hi", "en"]
 
 embedding_config:
   text:
-    model: "multilingual-embeddings-x"
-    dim: 3072
+    model: "granite-embedding:30m"   # (recommend pin; you can keep :latest if you prefer)
+    dim: 768                           # Granite 278m produces 768-d vectors
     chunking:
-      strategy: "semantic+fixed"
+      strategy: "semantic+fixed"       # we'll approximate this below
       max_tokens: 512
       overlap_tokens: 64
     normalize: true
@@ -37,16 +37,6 @@ index_of_topics:
         media_type: "text/markdown"
         bytes: 4210
         citations: [who-bec]
-      - id: guide-bleed-tourniquet
-        path: "core/bleed-control/hi_en/bleeding_tourniquet_steps.pdf"
-        media_type: "application/pdf"
-        bytes: 185532
-        citations: [who-bec, sphere]
-      - id: guide-bleed-local
-        path: "core/bleed-control/local/bleeding_control_local_practices.txt"
-        media_type: "text/plain"
-        bytes: 1392
-        citations: [ndma-flood]
 
   - id: fracture-splint
     title: "Suspected Fracture & Splinting | हड्डी टूटना व स्प्लिंटिंग"
@@ -56,35 +46,15 @@ index_of_topics:
         media_type: "text/markdown"
         bytes: 3988
         citations: [who-bec]
-      - id: guide-splint-materials
-        path: "core/fracture-splint/hi_en/splint_with_local_materials.pdf"
-        media_type: "application/pdf"
-        bytes: 203447
-        citations: [sphere]
-      - id: guide-fracture-referral
-        path: "core/fracture-splint/hi_en/fracture_when_to_refer.md"
-        media_type: "text/markdown"
-        bytes: 3102
-        citations: [who-bec]
 
   - id: burns
     title: "Burns (Flame/Scald/Electrical) | जलन (आग/गर्म पानी/बिजली)"
     core_files:
-      - id: guide-burns-first
-        path: "core/burns/hi_en/burns_first_steps.md"
-        media_type: "text/markdown"
-        bytes: 2611
-        citations: [who-bec]
       - id: guide-burns-dont
         path: "core/burns/hi_en/burns_dos_and_donts.md"
         media_type: "text/markdown"
         bytes: 2419
         citations: [sphere]
-      - id: guide-burns-referral
-        path: "core/burns/hi_en/burns_referral_criteria.pdf"
-        media_type: "application/pdf"
-        bytes: 167221
-        citations: [who-bec]
 
   - id: heat-illness
     title: "Heat Exhaustion & Heatstroke | लू व हीटस्ट्रोक"
@@ -94,54 +64,24 @@ index_of_topics:
         media_type: "text/markdown"
         bytes: 3320
         citations: [ndma-heat]
-      - id: guide-heat-cooling
-        path: "core/heat-illness/hi_en/heat_active_cooling.pdf"
-        media_type: "application/pdf"
-        bytes: 145876
-        citations: [who-bec]
-      - id: guide-heat-local
-        path: "core/heat-illness/local/heat_illness_local_signs.md"
-        media_type: "text/markdown"
-        bytes: 1180
-        citations: [ndma-heat]
 
   - id: snakebite
     title: "Snakebite (Krait/Viper) | सर्पदंश (करैत/वायपर)"
     core_files:
-      - id: guide-snakebite-first
-        path: "core/snakebite/hi_en/snakebite_first_aid.md"
-        media_type: "text/markdown"
-        bytes: 2910
-        citations: [who-searo-snakebite]
       - id: guide-snakebite-donts
         path: "core/snakebite/hi_en/snakebite_dos_and_donts.md"
         media_type: "text/markdown"
         bytes: 2104
         citations: [who-searo-snakebite]
-      - id: guide-snakebite-transport
-        path: "core/snakebite/hi_en/snakebite_transport.pdf"
-        media_type: "application/pdf"
-        bytes: 128334
-        citations: [who-searo-snakebite]
 
   - id: flood-wounds
     title: "Flood‑Related Wounds & Infection | बाढ़ के घाव व संक्रमण"
     core_files:
-      - id: guide-flood-cuts
-        path: "core/flood-wounds/hi_en/flood_cuts_cleaning.docx"
-        media_type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-        bytes: 41288
-        citations: [ndma-flood]
       - id: guide-flood-infection
         path: "core/flood-wounds/hi_en/flood_infection_signs.md"
         media_type: "text/markdown"
         bytes: 2308
         citations: [icmr-lepto]
-      - id: guide-flood-tetanus
-        path: "core/flood-wounds/hi_en/flood_tetanus_precautions.md"
-        media_type: "text/markdown"
-        bytes: 1762
-        citations: [who-bec]
 
   - id: diarrhea-ors
     title: "Diarrhea, ORS & Zinc | दस्त, ओआरएस व जिंक"
@@ -150,16 +90,6 @@ index_of_topics:
         path: "core/diarrhea-ors/hi_en/ors_homemade_recipe.md"
         media_type: "text/markdown"
         bytes: 1620
-        citations: [unicef-ors]
-      - id: guide-ors-use
-        path: "core/diarrhea-ors/hi_en/ors_usage_in_children.pdf"
-        media_type: "application/pdf"
-        bytes: 153554
-        citations: [unicef-ors]
-      - id: guide-zinc
-        path: "core/diarrhea-ors/hi_en/zinc_supplementation.md"
-        media_type: "text/markdown"
-        bytes: 1411
         citations: [unicef-ors]
 
   - id: choking
@@ -170,16 +100,6 @@ index_of_topics:
         media_type: "text/markdown"
         bytes: 1320
         citations: [who-bec]
-      - id: guide-choking-child
-        path: "core/choking/hi_en/choking_child.md"
-        media_type: "text/markdown"
-        bytes: 1388
-        citations: [who-bec]
-      - id: guide-choking-infant
-        path: "core/choking/hi_en/choking_infant.pdf"
-        media_type: "application/pdf"
-        bytes: 121554
-        citations: [who-bec]
 
   - id: cpr
     title: "Hands‑Only CPR (Adult) | हैंड्स‑ओनली सीपीआर (वयस्क)"
@@ -188,11 +108,6 @@ index_of_topics:
         path: "core/cpr/hi_en/cpr_steps.md"
         media_type: "text/markdown"
         bytes: 2012
-        citations: [who-bec]
-      - id: guide-cpr-checklist
-        path: "core/cpr/hi_en/cpr_quick_checklist.docx"
-        media_type: "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-        bytes: 30712
         citations: [who-bec]
 
   - id: maternal
@@ -203,20 +118,10 @@ index_of_topics:
         media_type: "text/markdown"
         bytes: 2209
         citations: [who-bec]
-      - id: guide-maternal-referral
-        path: "core/maternal/hi_en/maternal_referral_steps.pdf"
-        media_type: "application/pdf"
-        bytes: 111882
-        citations: [sphere]
 
   - id: poisoning
     title: "Common Poisonings (Pesticides) | सामान्य विषाक्तता (कीटनाशक)"
     core_files:
-      - id: guide-poison-overview
-        path: "core/poisoning/hi_en/poisoning_overview.md"
-        media_type: "text/markdown"
-        bytes: 1902
-        citations: [who-bec]
       - id: guide-poison-firstaid
         path: "core/poisoning/hi_en/poisoning_first_aid.md"
         media_type: "text/markdown"
