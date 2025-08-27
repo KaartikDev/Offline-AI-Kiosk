@@ -6,7 +6,7 @@ locales: ["hi", "en"]
 embedding_config:
   text:
     model: "granite-embedding:30m"   # (recommend pin; you can keep :latest if you prefer)
-    dim: 768                           # Granite 278m produces 768-d vectors
+    dim: 384                           # Granite 278m produces 768-d vectors
     chunking:
       strategy: "semantic+fixed"       # we'll approximate this below
       max_tokens: 512
@@ -20,8 +20,11 @@ embedding_config:
 precomputed_indices:
   text:
     embeddings: "vector_db/text/embeddings.jsonl"
-    index: "vector_db/text/index.bin"
     meta: "vector_db/text/meta.json"
+    faiss:
+      dir: "vector_db/text/faiss_index"
+      index: "vector_db/text/faiss_index/index.faiss"
+      docstore: "vector_db/text/faiss_index/index.pkl"
   images:
     captions: "vector_db/images/captions.jsonl"
     embeddings: "vector_db/images/embeddings.jsonl"

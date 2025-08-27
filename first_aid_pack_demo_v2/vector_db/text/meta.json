@@ -1,6 +1,6 @@
 {
   "model": "granite-embedding:30m",
-  "dim": 768,
+  "dim": 384,
   "normalize": true,
   "count": 11,
   "pack": {
