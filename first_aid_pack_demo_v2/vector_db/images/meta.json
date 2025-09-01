@@ -1,0 +1,14 @@
+{
+  "model": "granite-embedding:30m",
+  "dim": 384,
+  "normalize": true,
+  "count": 6,
+  "pack": {
+    "name": "Eastern Bihar – First Aid & Community Health | पूर्वी बिहार – प्राथमिक चिकित्सा",
+    "version": "0.3.1",
+    "locales": [
+      "hi",
+      "en"
+    ]
+  }
+}

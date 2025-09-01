@@ -5,16 +5,16 @@ locales: ["hi", "en"]
 
 embedding_config:
   text:
-    model: "granite-embedding:30m"   # (recommend pin; you can keep :latest if you prefer)
-    dim: 384                           # Granite 278m produces 768-d vectors
+    model: "granite-embedding:30m"   
+    dim: 384                           # Granite 30m produces 384 dim vectors
     chunking:
-      strategy: "semantic+fixed"       # we'll approximate this below
+      strategy: "semantic+fixed"       # we approximate this
       max_tokens: 512
       overlap_tokens: 64
     normalize: true
   images:
-    model: "multimodal-embeddings-x"
-    dim: 1024
+    model: "granite-embedding:30m"
+    dim: 384
     normalize: true
 
 precomputed_indices:
@@ -30,6 +30,10 @@ precomputed_indices:
     embeddings: "vector_db/images/embeddings.jsonl"
     index: "vector_db/images/index.bin"
     meta: "vector_db/images/meta.json"
+    faiss:
+      dir: "vector_db/images/faiss_index"
+      index: "vector_db/images/faiss_index/index.faiss"
+      docstore: "vector_db/images/faiss_index/index.pkl"
 
 index_of_topics:
   - id: bleed-control
@@ -136,13 +140,13 @@ assets:
     path: "assets/bleeding/tourniquet.png"
     media_type: "image/png"
     bytes: 94000
-    image_description: "Step-by-step improvised tourniquet using pro tournique."
+    image_description: "Step-by-step improvised tourniquet using cloth and stick. Severe Bleeding."
     citations: [journal-trauma]
   - id: img-splint
     path: "assets/fracture/splint.png"
     media_type: "image/png"
     bytes: 115000
-    image_description: "Immobilize fractures with cloth and stick. Arm and leg."
+    image_description: "Immobilize fractures with splint. Arm and leg. Broken bone."
     citations: [aid-code]
   - id: img-ors
     path: "assets/diarrhea/ors_mixing.png"
