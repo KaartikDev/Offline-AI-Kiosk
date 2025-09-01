@@ -5,16 +5,16 @@ locales: ["hi", "en"]
 
 embedding_config:
   text:
-    model: "granite-embedding:30m"   
-    dim: 384                           # Granite 30m produces 384 dim vectors
+    model: "nomic-embed-text:v1.5"   
+    dim: 512                           # Granite 30m produces 384 dim vectors
     chunking:
       strategy: "semantic+fixed"       # we approximate this
       max_tokens: 512
       overlap_tokens: 64
     normalize: true
   images:
-    model: "granite-embedding:30m"
-    dim: 384
+    model: "nomic-embed-text:v1.5"
+    dim: 512
     normalize: true
 
 precomputed_indices:
