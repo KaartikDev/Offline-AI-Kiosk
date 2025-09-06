@@ -1,0 +1,394 @@
+name: "Eastern Bihar – Health, Water & Rural Safety | पूर्वी बिहार – स्वास्थ्य, जल व ग्रामीण सुरक्षा"
+version: "0.3.1"
+date: "2025-08-23"
+locales: ["hi", "en"]
+
+embedding_config:
+  text:
+    model: "nomic-embed-text:v1.5"
+    dim: 512
+    chunking:
+      strategy: "semantic+fixed"
+      max_tokens: 512
+      overlap_tokens: 64
+    normalize: true
+  images:
+    model: "nomic-embed-text:v1.5"
+    dim: 512
+    normalize: true
+
+precomputed_indices:
+  text:
+    embeddings: "vector_db/text/embeddings.jsonl"
+    meta: "vector_db/text/meta.json"
+    faiss:
+      dir: "vector_db/text/faiss_index"
+      index: "vector_db/text/faiss_index/index.faiss"
+      docstore: "vector_db/text/faiss_index/index.pkl"
+  images:
+    captions: "vector_db/images/captions.jsonl"
+    embeddings: "vector_db/images/embeddings.jsonl"
+    index: "vector_db/images/index.bin"
+    meta: "vector_db/images/meta.json"
+    faiss:
+      dir: "vector_db/images/faiss_index"
+      index: "vector_db/images/faiss_index/index.faiss"
+      docstore: "vector_db/images/faiss_index/index.pkl"
+
+index_of_topics:
+  - id: bleeding
+    title: "Bleeding | रक्तस्राव"
+    core_files:
+      - id: TEMP
+        path: "core/bleeding/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: choking-cpr
+    title: "Choking & CPR | गला घुटना व सीपीआर"
+    core_files:
+      - id: TEMP
+        path: "core/choking-cpr/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: snakebite
+    title: "Snakebite | सर्पदंश"
+    core_files:
+      - id: TEMP
+        path: "core/snakebite/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: heat
+    title: "Heat Illness | लू"
+    core_files:
+      - id: TEMP
+        path: "core/heat/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: burns
+    title: "Burns | जलन"
+    core_files:
+      - id: TEMP
+        path: "core/burns/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: diarrhea
+    title: "Diarrhea & ORS | दस्त व ओआरएस"
+    core_files:
+      - id: TEMP
+        path: "core/diarrhea/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: maternal
+    title: "Maternal Signs | मातृ संकेत"
+    core_files:
+      - id: TEMP
+        path: "core/maternal/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: child-illness
+    title: "Child Fever | बच्चों का बुखार"
+    core_files:
+      - id: TEMP
+        path: "core/child-illness/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: joint-pain
+    title: "Joint/Back Pain | जोड़/पीठ दर्द"
+    core_files:
+      - id: TEMP
+        path: "core/joint-pain/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: fractures
+    title: "Fractures | हड्डी टूटना"
+    core_files:
+      - id: TEMP
+        path: "core/fractures/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: rash
+    title: "Plant Rash | पौधों से खुजली"
+    core_files:
+      - id: TEMP
+        path: "core/rash/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: safe-water
+    title: "Drinking Water | पेयजल"
+    core_files:
+      - id: TEMP
+        path: "core/safe-water/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: water-storage
+    title: "Water Shortage | पानी की कमी"
+    core_files:
+      - id: TEMP
+        path: "core/water-storage/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: rainwater
+    title: "Rainwater Harvesting | वर्षा जल"
+    core_files:
+      - id: TEMP
+        path: "core/rainwater/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: flood-wounds
+    title: "Flood Wounds | बाढ़ घाव"
+    core_files:
+      - id: TEMP
+        path: "core/flood-wounds/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: pesticides
+    title: "Pesticides Safety | कीटनाशक सुरक्षा"
+    core_files:
+      - id: TEMP
+        path: "core/pesticides/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: wild-animals
+    title: "Wild Animals | जंगली जानवर"
+    core_files:
+      - id: TEMP
+        path: "core/wild-animals/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: transport
+    title: "Transport | यातायात"
+    core_files:
+      - id: TEMP
+        path: "core/transport/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: contacts
+    title: "District Contacts | जिला संपर्क"
+    core_files:
+      - id: TEMP
+        path: "core/contacts/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+  - id: education
+    title: "Education Paths | शिक्षा मार्ग"
+    core_files:
+      - id: TEMP
+        path: "core/education/TEMP.md"
+        media_type: "text/markdown"
+        bytes: 0
+        citations: [who-bec]
+
+assets:
+  - id: img-bleeding-tourniquet
+    path: "assets/bleeding/tourniquet.png"
+    media_type: "image/png"
+    bytes: 50000
+    image_description: "Improvised tourniquet for bleeding control."
+    citations: [who-bec]
+  - id: img-bleeding-pressure
+    path: "assets/bleeding/pressure.png"
+    media_type: "image/png"
+    bytes: 40000
+    image_description: "Apply firm pressure with cloth to wound."
+    citations: [who-bec]
+
+  - id: img-choking-heimlich
+    path: "assets/choking-cpr/heimlich.png"
+    media_type: "image/png"
+    bytes: 42000
+    image_description: "Heimlich maneuver for choking adult."
+    citations: [who-bec]
+  - id: img-cpr-hands
+    path: "assets/choking-cpr/hands_only_cpr.png"
+    media_type: "image/png"
+    bytes: 45000
+    image_description: "Hands-only CPR chest compressions."
+    citations: [who-bec]
+
+  - id: img-snakebite-no-cut
+    path: "assets/snakebite/no_cut.png"
+    media_type: "image/png"
+    bytes: 46000
+    image_description: "Do not cut or suck a snakebite wound."
+    citations: [who-bec]
+  - id: img-snakebite-immobilize
+    path: "assets/snakebite/immobilize.png"
+    media_type: "image/png"
+    bytes: 47000
+    image_description: "Immobilize limb with splint for snakebite."
+    citations: [who-bec]
+
+  - id: img-heat-cooling
+    path: "assets/heat/cooling.png"
+    media_type: "image/png"
+    bytes: 44000
+    image_description: "Cool with wet cloths and fanning."
+    citations: [who-bec]
+  - id: img-heat-shade
+    path: "assets/heat/shade.png"
+    media_type: "image/png"
+    bytes: 41000
+    image_description: "Move patient to shade, loosen clothing."
+    citations: [who-bec]
+
+  - id: img-burns-water
+    path: "assets/burns/cool_water.png"
+    media_type: "image/png"
+    bytes: 43000
+    image_description: "Cool burns under running water."
+    citations: [who-bec]
+  - id: img-burns-cover
+    path: "assets/burns/cover.png"
+    media_type: "image/png"
+    bytes: 42000
+    image_description: "Cover burn with clean cloth."
+    citations: [who-bec]
+
+  - id: img-diarrhea-ors
+    path: "assets/diarrhea/ors.png"
+    media_type: "image/png"
+    bytes: 44000
+    image_description: "ORS mixing: sugar, salt, clean water."
+    citations: [who-bec]
+
+  - id: img-maternal-warning
+    path: "assets/maternal/warning.png"
+    media_type: "image/png"
+    bytes: 43000
+    image_description: "Danger signs in pregnancy."
+    citations: [who-bec]
+
+  - id: img-child-fever
+    path: "assets/child-illness/fever.png"
+    media_type: "image/png"
+    bytes: 42000
+    image_description: "Checking child’s temperature."
+    citations: [who-bec]
+
+  - id: img-joint-rest
+    path: "assets/joint-pain/rest.png"
+    media_type: "image/png"
+    bytes: 41000
+    image_description: "Resting joints after farm work."
+    citations: [who-bec]
+
+  - id: img-fracture-splint
+    path: "assets/fractures/splint.png"
+    media_type: "image/png"
+    bytes: 46000
+    image_description: "Immobilize fracture with splint."
+    citations: [who-bec]
+
+  - id: img-rash-plant
+    path: "assets/rash/plant_contact.png"
+    media_type: "image/png"
+    bytes: 41000
+    image_description: "Skin rash after plant contact."
+    citations: [who-bec]
+
+  - id: img-water-boil
+    path: "assets/safe-water/boil.png"
+    media_type: "image/png"
+    bytes: 42000
+    image_description: "Boiling water for safe drinking."
+    citations: [who-bec]
+
+  - id: img-storage-containers
+    path: "assets/water-storage/containers.png"
+    media_type: "image/png"
+    bytes: 43000
+    image_description: "Storing water in covered vessels."
+    citations: [who-bec]
+
+  - id: img-rainwater-collection
+    path: "assets/rainwater/collection.png"
+    media_type: "image/png"
+    bytes: 44000
+    image_description: "Collecting rainwater in tanks."
+    citations: [who-bec]
+
+  - id: img-flood-wounds
+    path: "assets/flood-wounds/wound.png"
+    media_type: "image/png"
+    bytes: 45000
+    image_description: "Cleaning flood-related wound."
+    citations: [who-bec]
+
+  - id: img-pesticides-safety
+    path: "assets/pesticides/safety.png"
+    media_type: "image/png"
+    bytes: 42000
+    image_description: "Wear gloves when handling pesticides."
+    citations: [who-bec]
+
+  - id: img-wild-animals-fence
+    path: "assets/wild-animals/fence.png"
+    media_type: "image/png"
+    bytes: 43000
+    image_description: "Fencing to protect crops from animals."
+    citations: [who-bec]
+
+  - id: img-transport-bus
+    path: "assets/transport/bus.png"
+    media_type: "image/png"
+    bytes: 41000
+    image_description: "Bus transport to city."
+    citations: [who-bec]
+
+  - id: img-contacts-office
+    path: "assets/contacts/office.png"
+    media_type: "image/png"
+    bytes: 40000
+    image_description: "District office building."
+    citations: [who-bec]
+
+  - id: img-education-school
+    path: "assets/education/school.png"
+    media_type: "image/png"
+    bytes: 42000
+    image_description: "Village school building."
+    citations: [who-bec]
+
+citations:
+  - id: who-bec
+    title: "WHO Basic Emergency Care (B.E.C.)"
+    url: "https://www.who.int/emergencycare/publications/basic-emergency-care"
+    license: "CC BY-NC-SA (verify)"
