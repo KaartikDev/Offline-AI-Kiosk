@@ -23,6 +23,78 @@ Native language support, cultural grounding, and strict safety guardrails are ke
 
 The AI Agent will use GPT-OSS:20B and entered into OpenAI's hackathon.
 
+### File Tree
+first_aid_knowledge_pack_v3/
+└── first_aid_knowledge_pack_v3/
+    ├── manifest.yaml
+    ├── assets/
+    │   ├── bleeding/
+    │   │   ├── pressure.png
+    │   │   └── tourniquet.png
+    │   ├── burns/
+    │   │   ├── cool_water.png
+    │   │   └── cover.png
+    │   ├── child-illness/fever.png
+    │   ├── choking-cpr/
+    │   │   ├── hands_only_cpr.png
+    │   │   └── heimlich.png
+    │   ├── contacts/office.png
+    │   ├── diarrhea/ors.png
+    │   ├── education/school.png
+    │   ├── flood-wounds/wound.png
+    │   ├── fractures/splint.png
+    │   ├── heat/
+    │   │   ├── cooling.png
+    │   │   └── shade.png
+    │   ├── joint-pain/rest.png
+    │   ├── maternal/warning.png
+    │   ├── pesticides/safety.png
+    │   ├── rainwater/collection.png
+    │   ├── rash/plant_contact.png
+    │   ├── safe-water/boil.png
+    │   ├── snakebite/
+    │   │   ├── immobilize.png
+    │   │   └── no_cut.png
+    │   ├── transport/bus.png
+    │   ├── water-storage/containers.png
+    │   └── wild-animals/fence.png
+    ├── core/
+    │   ├── bleeding/hi_en/TEMP.md
+    │   ├── burns/hi_en/TEMP.md
+    │   ├── child-illness/hi_en/TEMP.md
+    │   ├── choking-cpr/hi_en/TEMP.md
+    │   ├── contacts/hi_en/TEMP.md
+    │   ├── diarrhea/hi_en/TEMP.md
+    │   ├── education/hi_en/TEMP.md
+    │   ├── flood-wounds/hi_en/TEMP.md
+    │   ├── fractures/hi_en/TEMP.md
+    │   ├── heat/hi_en/TEMP.md
+    │   ├── joint-pain/hi_en/TEMP.md
+    │   ├── maternal/hi_en/TEMP.md
+    │   ├── pesticides/hi_en/TEMP.md
+    │   ├── rainwater/hi_en/TEMP.md
+    │   ├── rash/hi_en/TEMP.md
+    │   ├── safe-water/hi_en/TEMP.md
+    │   ├── snakebite/hi_en/TEMP.md
+    │   ├── transport/hi_en/TEMP.md
+    │   ├── water-storage/hi_en/TEMP.md
+    │   └── wild-animals/hi_en/TEMP.md
+    ├── vector_db/
+    │   ├── text/
+    │   │   ├── embeddings.jsonl
+    │   │   ├── meta.json
+    │   │   └── faiss_index/
+    │   │       ├── index.faiss
+    │   │       └── index.pkl
+    │   └── images/
+    │       ├── captions.jsonl
+    │       ├── embeddings.jsonl
+    │       ├── index.bin
+    │       ├── meta.json
+    │       └── faiss_index/
+    │           ├── index.faiss
+    │           └── index.pkl
+
 
 ### Potential Avenues:
  - "Internet without internet"
