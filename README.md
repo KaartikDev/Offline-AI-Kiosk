@@ -24,6 +24,7 @@ Native language support, cultural grounding, and strict safety guardrails are ke
 The AI Agent will use GPT-OSS:20B and entered into OpenAI's hackathon.
 
 ### File Tree
+```
 first_aid_knowledge_pack_v3/
 └── first_aid_knowledge_pack_v3/
     ├── manifest.yaml
@@ -94,7 +95,7 @@ first_aid_knowledge_pack_v3/
     │       └── faiss_index/
     │           ├── index.faiss
     │           └── index.pkl
-
+```
 
 ### Potential Avenues:
  - "Internet without internet"
