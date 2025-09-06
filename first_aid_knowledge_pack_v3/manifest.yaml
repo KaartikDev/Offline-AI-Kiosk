@@ -40,7 +40,7 @@ index_of_topics:
     title: "Bleeding | रक्तस्राव"
     core_files:
       - id: TEMP
-        path: "core/bleeding/TEMP.md"
+        path: "core/bleeding/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -49,7 +49,7 @@ index_of_topics:
     title: "Choking & CPR | गला घुटना व सीपीआर"
     core_files:
       - id: TEMP
-        path: "core/choking-cpr/TEMP.md"
+        path: "core/choking-cpr/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -58,7 +58,7 @@ index_of_topics:
     title: "Snakebite | सर्पदंश"
     core_files:
       - id: TEMP
-        path: "core/snakebite/TEMP.md"
+        path: "core/snakebite/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -67,7 +67,7 @@ index_of_topics:
     title: "Heat Illness | लू"
     core_files:
       - id: TEMP
-        path: "core/heat/TEMP.md"
+        path: "core/heat/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -76,7 +76,7 @@ index_of_topics:
     title: "Burns | जलन"
     core_files:
       - id: TEMP
-        path: "core/burns/TEMP.md"
+        path: "core/burns/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -85,7 +85,7 @@ index_of_topics:
     title: "Diarrhea & ORS | दस्त व ओआरएस"
     core_files:
       - id: TEMP
-        path: "core/diarrhea/TEMP.md"
+        path: "core/diarrhea/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -94,7 +94,7 @@ index_of_topics:
     title: "Maternal Signs | मातृ संकेत"
     core_files:
       - id: TEMP
-        path: "core/maternal/TEMP.md"
+        path: "core/maternal/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -103,7 +103,7 @@ index_of_topics:
     title: "Child Fever | बच्चों का बुखार"
     core_files:
       - id: TEMP
-        path: "core/child-illness/TEMP.md"
+        path: "core/child-illness/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -112,7 +112,7 @@ index_of_topics:
     title: "Joint/Back Pain | जोड़/पीठ दर्द"
     core_files:
       - id: TEMP
-        path: "core/joint-pain/TEMP.md"
+        path: "core/joint-pain/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -121,7 +121,7 @@ index_of_topics:
     title: "Fractures | हड्डी टूटना"
     core_files:
       - id: TEMP
-        path: "core/fractures/TEMP.md"
+        path: "core/fractures/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -130,7 +130,7 @@ index_of_topics:
     title: "Plant Rash | पौधों से खुजली"
     core_files:
       - id: TEMP
-        path: "core/rash/TEMP.md"
+        path: "core/rash/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -139,7 +139,7 @@ index_of_topics:
     title: "Drinking Water | पेयजल"
     core_files:
       - id: TEMP
-        path: "core/safe-water/TEMP.md"
+        path: "core/safe-water/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -148,7 +148,7 @@ index_of_topics:
     title: "Water Shortage | पानी की कमी"
     core_files:
       - id: TEMP
-        path: "core/water-storage/TEMP.md"
+        path: "core/water-storage/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -157,7 +157,7 @@ index_of_topics:
     title: "Rainwater Harvesting | वर्षा जल"
     core_files:
       - id: TEMP
-        path: "core/rainwater/TEMP.md"
+        path: "core/rainwater/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -166,7 +166,7 @@ index_of_topics:
     title: "Flood Wounds | बाढ़ घाव"
     core_files:
       - id: TEMP
-        path: "core/flood-wounds/TEMP.md"
+        path: "core/flood-wounds/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -175,7 +175,7 @@ index_of_topics:
     title: "Pesticides Safety | कीटनाशक सुरक्षा"
     core_files:
       - id: TEMP
-        path: "core/pesticides/TEMP.md"
+        path: "core/pesticides/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -184,7 +184,7 @@ index_of_topics:
     title: "Wild Animals | जंगली जानवर"
     core_files:
       - id: TEMP
-        path: "core/wild-animals/TEMP.md"
+        path: "core/wild-animals/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -193,7 +193,7 @@ index_of_topics:
     title: "Transport | यातायात"
     core_files:
       - id: TEMP
-        path: "core/transport/TEMP.md"
+        path: "core/transport/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -202,7 +202,7 @@ index_of_topics:
     title: "District Contacts | जिला संपर्क"
     core_files:
       - id: TEMP
-        path: "core/contacts/TEMP.md"
+        path: "core/contacts/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]
@@ -211,7 +211,7 @@ index_of_topics:
     title: "Education Paths | शिक्षा मार्ग"
     core_files:
       - id: TEMP
-        path: "core/education/TEMP.md"
+        path: "core/education/hi_en/TEMP.md"
         media_type: "text/markdown"
         bytes: 0
         citations: [who-bec]

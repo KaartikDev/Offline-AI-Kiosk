@@ -3,31 +3,33 @@ from pathlib import Path
 import os
 import sys
 
-# >>> CHANGE THIS IF YOU WANT A DIFFERENT TARGET <<<
 BASE = Path("/Users/ktejwani/Personal CS Projects/Summer 2025/Offline AI Kiosk/Offline-AI-Kiosk/first_aid_knowledge_pack_v3")
 
 FLAT_FILES = [
     "manifest.yaml",
-    "core/bleeding/TEMP.md",
-    "core/choking-cpr/TEMP.md",
-    "core/snakebite/TEMP.md",
-    "core/heat/TEMP.md",
-    "core/burns/TEMP.md",
-    "core/diarrhea/TEMP.md",
-    "core/maternal/TEMP.md",
-    "core/child-illness/TEMP.md",
-    "core/joint-pain/TEMP.md",
-    "core/fractures/TEMP.md",
-    "core/rash/TEMP.md",
-    "core/safe-water/TEMP.md",
-    "core/water-storage/TEMP.md",
-    "core/rainwater/TEMP.md",
-    "core/flood-wounds/TEMP.md",
-    "core/pesticides/TEMP.md",
-    "core/wild-animals/TEMP.md",
-    "core/transport/TEMP.md",
-    "core/contacts/TEMP.md",
-    "core/education/TEMP.md",
+    # core topics (TEMP.md inside hi_en/)
+    "core/bleeding/hi_en/TEMP.md",
+    "core/choking-cpr/hi_en/TEMP.md",
+    "core/snakebite/hi_en/TEMP.md",
+    "core/heat/hi_en/TEMP.md",
+    "core/burns/hi_en/TEMP.md",
+    "core/diarrhea/hi_en/TEMP.md",
+    "core/maternal/hi_en/TEMP.md",
+    "core/child-illness/hi_en/TEMP.md",
+    "core/joint-pain/hi_en/TEMP.md",
+    "core/fractures/hi_en/TEMP.md",
+    "core/rash/hi_en/TEMP.md",
+    "core/safe-water/hi_en/TEMP.md",
+    "core/water-storage/hi_en/TEMP.md",
+    "core/rainwater/hi_en/TEMP.md",
+    "core/flood-wounds/hi_en/TEMP.md",
+    "core/pesticides/hi_en/TEMP.md",
+    "core/wild-animals/hi_en/TEMP.md",
+    "core/transport/hi_en/TEMP.md",
+    "core/contacts/hi_en/TEMP.md",
+    "core/education/hi_en/TEMP.md",
+
+    # assets (images) — empty placeholders
     "assets/bleeding/tourniquet.png",
     "assets/bleeding/pressure.png",
     "assets/choking-cpr/heimlich.png",
@@ -53,11 +55,15 @@ FLAT_FILES = [
     "assets/transport/bus.png",
     "assets/contacts/office.png",
     "assets/education/school.png",
+
+    # vector_db / text
     "vector_db/text/embeddings.jsonl",
     "vector_db/text/meta.json",
     "vector_db/text/faiss_index",                       # directory
     "vector_db/text/faiss_index/index.faiss",
     "vector_db/text/faiss_index/index.pkl",
+
+    # vector_db / images
     "vector_db/images/captions.jsonl",
     "vector_db/images/embeddings.jsonl",
     "vector_db/images/index.bin",
@@ -68,24 +74,18 @@ FLAT_FILES = [
 ]
 
 def is_dir_marker(rel: str) -> bool:
-    # Treat entries with no extension as directories
     return '.' not in Path(rel).name
 
 def main():
     base = BASE.resolve()
     print(f"BASE: {base}")
-    # Ensure base exists
     base.mkdir(parents=True, exist_ok=True)
 
-    # Check writability
     if not os.access(base, os.W_OK):
         print(f"ERROR: BASE is not writable: {base}")
         sys.exit(2)
 
-    made_dirs = 0
-    made_files = 0
-    skipped_dirs = 0
-    skipped_files = 0
+    made_dirs = made_files = skipped_dirs = skipped_files = 0
 
     for rel in FLAT_FILES:
         target = base / rel
