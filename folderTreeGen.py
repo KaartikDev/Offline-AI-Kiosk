@@ -2,7 +2,7 @@
 from pathlib import Path
 import os
 import sys
-
+#where files get made
 BASE = Path("/Users/ktejwani/Personal CS Projects/Summer 2025/Offline AI Kiosk/Offline-AI-Kiosk/first_aid_knowledge_pack_v3")
 
 FLAT_FILES = [

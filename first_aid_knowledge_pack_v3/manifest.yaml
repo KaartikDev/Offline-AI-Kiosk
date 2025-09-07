@@ -39,182 +39,226 @@ index_of_topics:
   - id: bleeding
     title: "Bleeding | रक्तस्राव"
     core_files:
-      - id: TEMP
-        path: "core/bleeding/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: bleeding-ifrc-guidelines-2020
+        path: "core/bleeding/hi_en/EN_GFARC_GUIDELINES_2020.pdf"
+        media_type: "application/pdf"
+        citations: [ifrc-first-aid-guidelines-2020]
+      - id: bleeding-ircs-manual
+        path: "core/bleeding/hi_en/FA-manual-Ind-Red-Cross.pdf"
+        media_type: "application/pdf"
+        citations: [redcross-india-first-aid-manual]
 
   - id: choking-cpr
     title: "Choking & CPR | गला घुटना व सीपीआर"
     core_files:
-      - id: TEMP
-        path: "core/choking-cpr/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: choking-ifrc-guidelines-2020
+        path: "core/choking-cpr/hi_en/EN_GFARC_GUIDELINES_2020.pdf"
+        media_type: "application/pdf"
+        citations: [ifrc-first-aid-guidelines-2020]
+      - id: choking-irc-cols
+        path: "core/choking-cpr/hi_en/ISA-IRC-COLS-Guidelines.pdf"
+        media_type: "application/pdf"
+        citations: [irc-cols-layperson]
 
   - id: snakebite
     title: "Snakebite | सर्पदंश"
     core_files:
-      - id: TEMP
-        path: "core/snakebite/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: snakebite-icmr-booklet
+        path: "core/snakebite/hi_en/English-Booklet_compressed.pdf"
+        media_type: "application/pdf"
+        citations: [icmr-snakebite-booklet]
+      - id: snakebite-who-searo
+        path: "core/snakebite/hi_en/who-guidance-on-snakebites.pdf"
+        media_type: "application/pdf"
+        citations: [who-snakebite-searo-2016]
 
   - id: heat
     title: "Heat Illness | लू"
     core_files:
-      - id: TEMP
-        path: "core/heat/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: heat-ncdc-manual-2024
+        path: "core/heat/hi_en/2-Training-Manual-for-Community-Members-Recognising-and-Preventing-Heat-Related-Illnesses.pdf"
+        media_type: "application/pdf"
+        citations: [ncdc-heat-manual-2024]
+      - id: heat-ahmedabad-hap
+        path: "core/heat/hi_en/ahmedabad-heat-action-plan-2018.pdf"
+        media_type: "application/pdf"
+        citations: [ahmedabad-heat-action-plan-2018]
 
   - id: burns
     title: "Burns | जलन"
     core_files:
-      - id: TEMP
-        path: "core/burns/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: burns-who-book
+        path: "core/burns/hi_en/9789241501187_eng.pdf"
+        media_type: "application/pdf"
+        citations: [who-burn-prevention-care]
+      - id: burns-ifrc-guidelines-2020
+        path: "core/burns/hi_en/EN_GFARC_GUIDELINES_2020.pdf"
+        media_type: "application/pdf"
+        citations: [ifrc-first-aid-guidelines-2020]
 
   - id: diarrhea
     title: "Diarrhea & ORS | दस्त व ओआरएस"
     core_files:
-      - id: TEMP
-        path: "core/diarrhea/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: diarrhea-imnci-charts
+        path: "core/diarrhea/hi_en/imnci_chart_booklet.pdf"
+        media_type: "application/pdf"
+        citations: [imnci-chart-booklet-india]
+      - id: diarrhea-who-manual
+        path: "core/diarrhea/hi_en/treament of DIARRHEA.pdf"
+        media_type: "application/pdf"
+        citations: [who-diarrhoea-treatment-manual]
 
   - id: maternal
     title: "Maternal Signs | मातृ संकेत"
     core_files:
-      - id: TEMP
-        path: "core/maternal/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: maternal-who-community
+        path: "core/maternal/hi_en/9789241549295_ParticipantManual_eng.pdf"
+        media_type: "application/pdf"
+        citations: [who-caring-newborns-children]
+      - id: maternal-asha-module
+        path: "core/maternal/hi_en/maternal-health-asha.pdf"
+        media_type: "application/pdf"
+        citations: [asha-module-6]
 
   - id: child-illness
     title: "Child Fever | बच्चों का बुखार"
     core_files:
-      - id: TEMP
-        path: "core/child-illness/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: child-who-unicef-community
+        path: "core/child-illness/hi_en/9789241548045_Manual_eng.pdf"
+        media_type: "application/pdf"
+        citations: [who-unicef-sick-child-community]
 
   - id: joint-pain
     title: "Joint/Back Pain | जोड़/पीठ दर्द"
     core_files:
-      - id: TEMP
-        path: "core/joint-pain/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: joint-ilo-ergonomic
+        path: "core/joint-pain/hi_en/Ergonomic checkpoints in agriculture.pdf"
+        media_type: "application/pdf"
+        citations: [ilo-ergonomic-checkpoints-agriculture]
+      - id: joint-kch-lbp
+        path: "core/joint-pain/hi_en/pl-950.1-lower-back-pain.pdf"
+        media_type: "application/pdf"
+        citations: [kch-lower-back-pain]
 
   - id: fractures
     title: "Fractures | हड्डी टूटना"
     core_files:
-      - id: TEMP
-        path: "core/fractures/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: fractures-ifrc-guidelines-2020
+        path: "core/fractures/hi_en/EN_GFARC_GUIDELINES_2020.pdf"
+        media_type: "application/pdf"
+        citations: [ifrc-first-aid-guidelines-2020]
+      - id: fractures-stjohn-factsheet
+        path: "core/fractures/hi_en/Fact-sheets_fracture-and-dislocation.pdf"
+        media_type: "application/pdf"
+        citations: [stjohn-fracture-dislocation]
 
   - id: rash
     title: "Plant Rash | पौधों से खुजली"
     core_files:
-      - id: TEMP
-        path: "core/rash/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: rash-icar-parthenium
+        path: "core/rash/hi_en/IntegratedPartheniumManagement(Elglish)-Folder.pdf"
+        media_type: "application/pdf"
+        citations: [icar-parthenium-management]
+      - id: rash-cdc-poisonous-plants
+        path: "core/rash/hi_en/cdc-rashes-plant.pdf"
+        media_type: "application/pdf"
+        citations: [cdc-niosh-poisonous-plants]
 
   - id: safe-water
     title: "Drinking Water | पेयजल"
     core_files:
-      - id: TEMP
-        path: "core/safe-water/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: water-tn01-wells
+        path: "core/safe-water/hi_en/who-tn-01-cleaning-and-disinfecting-wells.pdf"
+        media_type: "application/pdf"
+        citations: [who-wedc-tn01-wells-floods]
+      - id: water-tn03-tanks
+        path: "core/safe-water/hi_en/who-tn-03-cleaning-and-disinfecting-water-storage-tanks-and-tankers.pdf"
+        media_type: "application/pdf"
+        citations: [who-wedc-tn03-tanks-tankers]
+      - id: water-tn05-point-of-use
+        path: "core/safe-water/hi_en/who-tn-05-emergency-treatment-of-drinking-water-at-the-point-of-use.pdf"
+        media_type: "application/pdf"
+        citations: [who-wedc-tn05-point-of-use]
 
   - id: water-storage
-    title: "Water Shortage | पानी की कमी"
+    title: "Water Storage | पानी की कमी"
     core_files:
-      - id: TEMP
-        path: "core/water-storage/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: water-tn09-needs
+        path: "core/water-storage/hi_en/who-tn-09-how-much-water-is-needed.pdf"
+        media_type: "application/pdf"
+        citations: [who-wedc-tn09-water-needs]
 
-  - id: rainwater
-    title: "Rainwater Harvesting | वर्षा जल"
+  - id: water-harvesting
+    title: "Water Harvesting | जल संचयन"
     core_files:
-      - id: TEMP
-        path: "core/rainwater/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: rwh-wedc-household-manual
+        path: "core/water-harvesting/hi_en/CAWSTRWH_Manual_2011-11_en.pdf"
+        media_type: "application/pdf"
+        citations: [wedc-household-rwh-manual]
+      - id: rwh-unicef-odisha
+        path: "core/water-harvesting/hi_en/sites-PD-WASH-WASH Knowledge unicef-Rooftop Rainwater Harvesting Odisha-2.0.pdf"
+        media_type: "application/pdf"
+        citations: [unicef-odisha-rooftop-rwh]
 
-  - id: flood-wounds
-    title: "Flood Wounds | बाढ़ घाव"
+  - id: infected-wounds
+    title: "Infected Wounds | संक्रमित घाव"
     core_files:
-      - id: TEMP
-        path: "core/flood-wounds/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: wounds-asha-induction
+        path: "core/infected-wounds/hi_en/Induction-Training-Module-for-ASHA-English_0.pdf"
+        media_type: "application/pdf"
+        citations: [asha-induction-training]
 
   - id: pesticides
     title: "Pesticides Safety | कीटनाशक सुरक्षा"
     core_files:
-      - id: TEMP
-        path: "core/pesticides/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: pesticides-fao-ipm-ffs
+        path: "core/pesticides/hi_en/cb3963en.pdf"
+        media_type: "application/pdf"
+        citations: [fao-dppqs-ffsg-ipm]
 
   - id: wild-animals
     title: "Wild Animals | जंगली जानवर"
     core_files:
-      - id: TEMP
-        path: "core/wild-animals/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: wildlife-moefcc-advisory
+        path: "core/wild-animals/hi_en/Advisory for Priority of Action for State Govt-Human Wildlife Conflict_0.pdf"
+        media_type: "application/pdf"
+        citations: [moefcc-hwc-priority-actions]
+      - id: wildlife-moefcc-strategy
+        path: "core/wild-animals/hi_en/National-Human-Wildlife-Conflict-Mitigation-Strategy-and-Action-Plan-of-India-2.pdf"
+        media_type: "application/pdf"
+        citations: [moefcc-hwc-strategy-action-plan-2022]
 
   - id: transport
     title: "Transport | यातायात"
     core_files:
-      - id: TEMP
-        path: "core/transport/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: transport-nhm-sop-108-102
+        path: "core/transport/hi_en/SOP-OF-AMBULANCE2020IPTHHScompressed.pdf"
+        media_type: "application/pdf"
+        citations: [nhm-sop-ambulances-108-102]
 
   - id: contacts
     title: "District Contacts | जिला संपर्क"
     core_files:
-      - id: TEMP
-        path: "core/contacts/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: contacts-serviceplus-manual
+        path: "core/contacts/hi_en/Bihar_Applicant_User_Manual.pdf"
+        media_type: "application/pdf"
+        citations: [bihar-serviceplus-user-manual]
+      - id: contacts-bihar-police-sdpo
+        path: "core/contacts/hi_en/S.D.P.O_contact.pdf"
+        media_type: "application/pdf"
+        citations: [bihar-police-sdpo-contacts]
+      - id: contacts-nhm-phc-directory
+        path: "core/contacts/hi_en/phc_list_bihar.pdf"
+        media_type: "application/pdf"
+        citations: [nhm-bihar-phc-directory]
 
   - id: education
     title: "Education Paths | शिक्षा मार्ग"
     core_files:
-      - id: TEMP
-        path: "core/education/hi_en/TEMP.md"
-        media_type: "text/markdown"
-        bytes: 0
-        citations: [who-bec]
+      - id: education-bscc-manual
+        path: "/core/education/hi_en/User_Manual_for_BSCCpdf1.pdf"
+        media_type: "application/pdf"
+        citations: [bihar-student-credit-card-manual]
 
 assets:
   - id: img-bleeding-tourniquet
@@ -389,6 +433,171 @@ assets:
 
 citations:
   - id: who-bec
-    title: "WHO Basic Emergency Care (B.E.C.)"
+    title: "Basic Emergency Care — World Health Organization"
     url: "https://www.who.int/emergencycare/publications/basic-emergency-care"
-    license: "CC BY-NC-SA (verify)"
+    license: "CC BY-NC-SA 3.0 IGO"
+
+  - id: redcross-india-first-aid-manual
+    title: "First Aid Manual — Indian Red Cross Society"
+    url: "https://ircsstoragedev.blob.core.windows.net/wordpresswebsite/2024/03/FA-manual-1.pdf"
+    license: "All rights reserved"
+
+  - id: ifrc-first-aid-guidelines-2020
+    title: "International First Aid and Resuscitation Guidelines 2020 — International Federation of Red Cross and Red Crescent Societies"
+    url: "https://www.ifrc.org/sites/default/files/2022-02/EN_GFARC_GUIDELINES_2020.pdf"
+    license: "IFRC custom: non-commercial use with attribution; permission required for commercial"
+
+  - id: irc-cols-layperson
+    title: "Compression-Only Life Support for Laypersons — Indian Resuscitation Council"
+    url: "https://staging.isaweb.in/Pdf/ISA-IRC-COLS-Guidelines.pdf"
+    license: "CC BY-NC-SA 3.0"
+
+  - id: who-snakebite-searo-2016
+    title: "Guidelines for the Management of Snakebite (2nd ed., 2016) — WHO South-East Asia Region"
+    url: "https://cdn.who.int/media/docs/default-source/searo/india/health-topic-pdf/who-guidance-on-management-of-snakebites.pdf"
+    license: "All rights reserved"
+
+  - id: icmr-snakebite-booklet
+    title: "Snakebite Awareness Booklet — ICMR-NIRRCH"
+    url: "https://nirrch.res.in/wp-content/uploads/2023/10/English-Booklet_compressed.pdf"
+    license: "All rights reserved"
+
+  - id: ncdc-heat-manual-2024
+    title: "Training Manual for Community Members: Recognising and Preventing Heat-Related Illnesses (2024) — NCDC, Ministry of Health and Family Welfare"
+    url: "https://ncdc.mohfw.gov.in/wp-content/uploads/2024/05/2-Training-Manual-for-Community-Members-Recognising-and-Preventing-Heat-Related-Illnesses.pdf"
+    license: "Unknown source license"
+
+  - id: ahmedabad-heat-action-plan-2018
+    title: "Ahmedabad Heat Action Plan — NRDC and Indian Institute of Public Health, Gandhinagar"
+    url: "https://www.nrdc.org/sites/default/files/ahmedabad-heat-action-plan-2018.pdf"
+    license: "Unknown source license"
+
+  - id: who-burn-prevention-care
+    title: "Burn Prevention and Care — World Health Organization"
+    url: "https://apps.who.int/iris/bitstream/10665/97938/1/9789241501187_eng.pdf"
+    license: "CC BY-NC-SA 3.0 IGO"
+
+  - id: who-diarrhoea-treatment-manual
+    title: "The Treatment of Diarrhoea: A Manual — World Health Organization"
+    url: "https://iris.who.int/bitstream/handle/10665/43209/9241593180.pdf"
+    license: "Unknown source license"
+
+  - id: imnci-chart-booklet-india
+    title: "Integrated Management of Neonatal and Childhood Illness: Chart Booklet — Government of India"
+    url: "https://nhm.gov.in/images/pdf/programmes/child-health/guidelines/imnci_chart_booklet.pdf"
+    license: "Unknown source license"
+
+  - id: asha-module-6
+    title: "ASHA Training Module 6 — Ministry of Health and Family Welfare, Government of India"
+    url: "https://nhm.gov.in/images/pdf/communitisation/asha/book-no-6.pdf"
+    license: "Unknown source license"
+
+  - id: who-caring-newborns-children
+    title: "Caring for Newborns and Children in the Community: Participant Manual — World Health Organization"
+    url: "https://iris.who.int/bitstream/handle/10665/204273/9789241549295_ParticipantManual_eng.pdf"
+    license: "Unknown source license"
+
+  - id: who-unicef-sick-child-community
+    title: "Caring for the Sick Child in the Community: Participant Manual — WHO and UNICEF"
+    url: "https://iris.who.int/bitstream/handle/10665/44398/9789241548045_Manual_eng.pdf"
+    license: "Unknown source license"
+
+  - id: ilo-ergonomic-checkpoints-agriculture
+    title: "Ergonomic Checkpoints in Agriculture — International Labour Organization"
+    url: "https://www.ilo.org/sites/default/files/wcmsp5/groups/public/%40dgreports/%40dcomm/%40publ/documents/publication/wcms_168042.pdf"
+    license: "All rights reserved"
+
+  - id: kch-lower-back-pain
+    title: "Lower Back Pain: Information for Patients — King’s College Hospital NHS Foundation Trust"
+    url: "https://www.kch.nhs.uk/wp-content/uploads/2023/01/pl-950.1-lower-back-pain.pdf"
+    license: "Unknown source license"
+
+  - id: stjohn-fracture-dislocation
+    title: "Fracture and Dislocation: First Aid Fact Sheet — St John Ambulance Australia"
+    url: "https://stjohn.org.au/app/uploads/2025/08/Fact-sheets_fracture-and-dislocation.pdf"
+    license: "All rights reserved"
+
+  - id: cdc-niosh-poisonous-plants
+    title: "Fast Facts: Protecting Yourself from Poisonous Plants — CDC NIOSH"
+    url: "https://www.cdc.gov/niosh/docs/2010-118/pdfs/2010-118.pdf"
+    license: "Public domain (U.S. Government)"
+
+  - id: icar-parthenium-management
+    title: "Integrated Parthenium (Congress Grass) Management — Indian Council of Agricultural Research"
+    url: "https://icar.org.in/sites/default/files/inline-files/IntegratedPartheniumManagement%28Elglish%29-Folder.pdf"
+    license: "Unknown source license"
+
+  - id: who-wedc-tn05-point-of-use
+    title: "Technical Note 5: Emergency Treatment of Drinking-Water at the Point of Use — WHO and WEDC"
+    url: "https://cdn.who.int/media/docs/default-source/wash-documents/who-tn-05-emergency-treatment-of-drinking-water-at-the-point-of-use.pdf"
+    license: "Unknown source license"
+
+  - id: who-wedc-tn03-tanks-tankers
+    title: "Technical Note 3: Cleaning and Disinfecting Water Storage Tanks and Tankers — WHO and WEDC"
+    url: "https://cdn.who.int/media/docs/default-source/wash-documents/who-tn-03-cleaning-and-disinfecting-water-storage-tanks-and-tankers.pdf"
+    license: "Unknown source license"
+
+  - id: who-wedc-tn01-wells-floods
+    title: "Technical Note 1: Cleaning and Disinfecting Hand-Dug Wells After Floods — WHO and WEDC"
+    url: "https://cdn.who.int/media/docs/default-source/wash-documents/who-tn-01-cleaning-and-disinfecting-wells.pdf"
+    license: "Unknown source license"
+
+  - id: who-wedc-tn09-water-needs
+    title: "Technical Note 9: How Much Water Is Needed in Emergencies — WHO and WEDC"
+    url: "https://cdn.who.int/media/docs/default-source/wash-documents/who-tn-09-how-much-water-is-needed.pdf"
+    license: "Unknown source license"
+
+  - id: unicef-odisha-rooftop-rwh
+    title: "Rooftop Rainwater Harvesting in Schools (Odisha) — UNICEF"
+    url: "https://clearinghouse.unicef.org/sites/ch/files/ch/sites-PD-WASH-WASH%20Knowledge%20unicef-Rooftop%20Rainwater%20Harvesting%20Odisha-2.0.pdf"
+    license: "Unknown source license"
+
+  - id: wedc-household-rwh-manual
+    title: "Introduction to Household Rainwater Harvesting: Participant Manual — WEDC, Loughborough University"
+    url: "https://wedc-knowledge.lboro.ac.uk/resources/pubs/CAWSTRWH_Manual_2011-11_en.pdf"
+    license: "Unknown source license"
+
+  - id: asha-induction-training
+    title: "ASHA Induction Training Module — National Health Systems Resource Centre"
+    url: "https://nhsrcindia.org/sites/default/files/2021-02/Induction-Training-Module-for-ASHA-English_0.pdf"
+    license: "Unknown source license"
+
+  - id: fao-dppqs-ffsg-ipm
+    title: "Farmer Field School: Integrated Pest Management — FAO and Directorate of Plant Protection, Quarantine and Storage"
+    url: "https://openknowledge.fao.org/server/api/core/bitstreams/3459ed25-6412-4752-8715-e94d8f5b4e2a/content"
+    license: "Unknown source license"
+
+  - id: moefcc-hwc-priority-actions
+    title: "Advisory: Priority Actions for Management of Human–Wildlife Conflict — Ministry of Environment, Forest and Climate Change"
+    url: "https://moef.gov.in/uploads/2018/03/Advisory%20for%20Priority%20of%20Action%20for%20State%20Govt-Human%20Wildlife%20Conflict_0.pdf"
+    license: "Unknown source license"
+
+  - id: moefcc-hwc-strategy-action-plan-2022
+    title: "National Human–Wildlife Conflict Mitigation Strategy and Action Plan — Ministry of Environment, Forest and Climate Change"
+    url: "https://moef.gov.in/uploads/2022/01/National-Human-Wildlife-Conflict-Mitigation-Strategy-and-Action-Plan-of-India-2.pdf"
+    license: "Unknown source license"
+
+  - id: nhm-sop-ambulances-108-102
+    title: "Standard Operating Procedure for 108/102 Ambulances — National Health Mission (Odisha)"
+    url: "https://nhmodisha.gov.in/wp-content/uploads/2023/08/SOP-OF-AMBULANCE2020IPTHHScompressed.pdf"
+    license: "Unknown source license"
+
+  - id: bihar-serviceplus-user-manual
+    title: "ServicePlus Applicant User Manual — Government of Bihar"
+    url: "https://serviceonline.bihar.gov.in/resources/homePage/10/Document/Bihar_Applicant_User_Manual.pdf"
+    license: "Unknown source license"
+
+  - id: nhm-bihar-phc-directory
+    title: "Primary Health Centre Directory by District — National Health Mission, Bihar"
+    url: "https://nhm.gov.in/images/pdf/communitisation/rogi-kalyan-samiti/phc_list_bihar.pdf"
+    license: "Unknown source license"
+
+  - id: bihar-police-sdpo-contacts
+    title: "Contact Details of Sub-Divisional Police Officers — Bihar Police"
+    url: "https://state.bihar.gov.in/cache/5/Document/S.D.P.O_contact.pdf"
+    license: "Unknown source license"
+
+  - id: bihar-student-credit-card-manual
+    title: "Bihar Student Credit Card: Applicant User Manual — Government of Bihar"
+    url: "https://www.7nishchay-yuvaupmission.bihar.gov.in/resources/User_Manual_for_BSCCpdf1.pdf"
+    license: "Unknown source license"
