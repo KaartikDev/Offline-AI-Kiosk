@@ -70,127 +70,85 @@ first_aid_knowledge_pack_v3/
 │   │   └── bus.png
 │   ├── water-storage
 │   │   └── containers.png
-│   ├── wild-animals
-│   │   └── fence.png
-│   └── .DS_Store
+│   └── wild-animals
+│       └── fence.png
 ├── core
 │   ├── bleeding
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   ├── EN_GFARC_GUIDELINES_2020.pdf
-│   │   │   └── FA-manual-Ind-Red-Cross.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       ├── EN_GFARC_GUIDELINES_2020.pdf
+│   │       └── FA-manual-Ind-Red-Cross.pdf
 │   ├── burns
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   ├── 9789241501187_eng.pdf
-│   │   │   └── EN_GFARC_GUIDELINES_2020.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       ├── 9789241501187_eng.pdf
+│   │       └── EN_GFARC_GUIDELINES_2020.pdf
 │   ├── child-illness
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   └── 9789241548045_Manual_eng.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       └── 9789241548045_Manual_eng.pdf
 │   ├── choking-cpr
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   ├── EN_GFARC_GUIDELINES_2020.pdf
-│   │   │   └── ISA-IRC-COLS-Guidelines.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       ├── EN_GFARC_GUIDELINES_2020.pdf
+│   │       └── ISA-IRC-COLS-Guidelines.pdf
 │   ├── contacts
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   ├── Bihar_Applicant_User_Manual.pdf
-│   │   │   ├── phc_list_bihar.pdf
-│   │   │   └── S.D.P.O_contact.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       ├── Bihar_Applicant_User_Manual.pdf
+│   │       ├── phc_list_bihar.pdf
+│   │       └── S.D.P.O_contact.pdf
 │   ├── diarrhea
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   ├── imnci_chart_booklet.pdf
-│   │   │   └── treament of DIARRHEA.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       ├── imnci_chart_booklet.pdf
+│   │       └── treament of DIARRHEA.pdf
 │   ├── education
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   └── User_Manual_for_BSCCpdf1.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       └── User_Manual_for_BSCCpdf1.pdf
 │   ├── fractures
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   ├── EN_GFARC_GUIDELINES_2020.pdf
-│   │   │   └── Fact-sheets_fracture-and-dislocation.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       ├── EN_GFARC_GUIDELINES_2020.pdf
+│   │       └── Fact-sheets_fracture-and-dislocation.pdf
 │   ├── heat
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   ├── 2-Training-Manual-for-Community-Members-Recognising-and-Preventing-Heat-Related-Illnesses.pdf
-│   │   │   └── ahmedabad-heat-action-plan-2018.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       ├── 2-Training-Manual-for-Community-Members-Recognising-and-Preventing-Heat-Related-Illnesses.pdf
+│   │       └── ahmedabad-heat-action-plan-2018.pdf
 │   ├── infected-wounds
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   └── Induction-Training-Module-for-ASHA-English_0.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       └── Induction-Training-Module-for-ASHA-English_0.pdf
 │   ├── joint-pain
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   ├── Ergonomic checkpoints in agriculture.pdf
-│   │   │   └── pl-950.1-lower-back-pain.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       ├── Ergonomic checkpoints in agriculture.pdf
+│   │       └── pl-950.1-lower-back-pain.pdf
 │   ├── maternal
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   ├── 9789241549295_ParticipantManual_eng.pdf
-│   │   │   └── maternal-health-asha.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       ├── 9789241549295_ParticipantManual_eng.pdf
+│   │       └── maternal-health-asha.pdf
 │   ├── pesticides
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   └── cb3963en.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       └── cb3963en.pdf
 │   ├── rash
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   ├── cdc-rashes-plant.pdf
-│   │   │   └── IntegratedPartheniumManagement(Elglish)-Folder.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       ├── cdc-rashes-plant.pdf
+│   │       └── IntegratedPartheniumManagement(Elglish)-Folder.pdf
 │   ├── safe-water
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   ├── who-tn-01-cleaning-and-disinfecting-wells.pdf
-│   │   │   ├── who-tn-03-cleaning-and-disinfecting-water-storage-tanks-and-tankers.pdf
-│   │   │   └── who-tn-05-emergency-treatment-of-drinking-water-at-the-point-of-use.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       ├── who-tn-01-cleaning-and-disinfecting-wells.pdf
+│   │       ├── who-tn-03-cleaning-and-disinfecting-water-storage-tanks-and-tankers.pdf
+│   │       └── who-tn-05-emergency-treatment-of-drinking-water-at-the-point-of-use.pdf
 │   ├── snakebite
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   ├── English-Booklet_compressed.pdf
-│   │   │   └── who-guidance-on-snakebites.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       ├── English-Booklet_compressed.pdf
+│   │       └── who-guidance-on-snakebites.pdf
 │   ├── transport
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   └── SOP-OF-AMBULANCE2020IPTHHScompressed.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       └── SOP-OF-AMBULANCE2020IPTHHScompressed.pdf
 │   ├── water-harvesting
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   ├── CAWSTRWH_Manual_2011-11_en.pdf
-│   │   │   └── sites-PD-WASH-WASH Knowledge unicef-Rooftop Rainwater Harvesting Odisha-2.0.pdf
-│   │   └── .DS_Store
+│   │   └── hi_en
+│   │       ├── CAWSTRWH_Manual_2011-11_en.pdf
+│   │       └── sites-PD-WASH-WASH Knowledge unicef-Rooftop Rainwater Harvesting Odisha-2.0.pdf
 │   ├── water-storage
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   └── who-tn-09-how-much-water-is-needed.pdf
-│   │   └── .DS_Store
-│   ├── wild-animals
-│   │   ├── hi_en
-│   │   │   ├── .DS_Store
-│   │   │   ├── Advisory for Priority of Action for State Govt-Human Wildlife Conflict_0.pdf
-│   │   │   └── National-Human-Wildlife-Conflict-Mitigation-Strategy-and-Action-Plan-of-India-2.pdf
-│   │   └── .DS_Store
-│   └── .DS_Store
+│   │   └── hi_en
+│   │       └── who-tn-09-how-much-water-is-needed.pdf
+│   └── wild-animals
+│       └── hi_en
+│           ├── Advisory for Priority of Action for State Govt-Human Wildlife Conflict_0.pdf
+│           └── National-Human-Wildlife-Conflict-Mitigation-Strategy-and-Action-Plan-of-India-2.pdf
 ├── vector_db
 │   ├── images
 │   │   ├── faiss_index
@@ -206,7 +164,6 @@ first_aid_knowledge_pack_v3/
 │       │   └── index.pkl
 │       ├── embeddings.jsonl
 │       └── meta.json
-├── .DS_Store
 └── manifest.yaml
 ```
 
