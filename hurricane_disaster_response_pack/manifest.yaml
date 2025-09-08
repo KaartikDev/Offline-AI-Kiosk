@@ -1,0 +1,316 @@
+name: "Pinellas County – Hurricane Disaster Response"
+version: "0.1.0"
+date: "2025-09-08"
+locales: ["en"]
+
+embedding_config:
+  text:
+    model: "nomic-embed-text:v1.5"
+    dim: 512
+    chunking:
+      strategy: "semantic+fixed"
+      max_tokens: 512
+      overlap_tokens: 64
+    normalize: true
+  images:
+    model: "nomic-embed-text:v1.5"
+    dim: 512
+    normalize: true
+
+precomputed_indices:
+  text:
+    embeddings: "vector_db/text/embeddings.jsonl"
+    meta: "vector_db/text/meta.json"
+    faiss:
+      dir: "vector_db/text/faiss_index"
+      index: "vector_db/text/faiss_index/index.faiss"
+      docstore: "vector_db/text/faiss_index/index.pkl"
+  images:
+    captions: "vector_db/images/captions.jsonl"
+    embeddings: "vector_db/images/embeddings.jsonl"
+    index: "vector_db/images/index.bin"
+    meta: "vector_db/images/meta.json"
+    faiss:
+      dir: "vector_db/images/faiss_index"
+      index: "vector_db/images/faiss_index/index.faiss"
+      docstore: "vector_db/images/faiss_index/index.pkl"
+
+index_of_topics:
+  - id: communication-utilities
+    title: "Communication & Utilities"
+    core_files:
+      - id: communication-guide
+        path: "core/communication-utilities/en/communication-guide.md"
+        media_type: "text/markdown"
+        citations: [pinellas-em, ready-gov, fema-comm]
+      - id: utilities-guide
+        path: "core/communication-utilities/en/utilities.md"
+        media_type: "text/markdown"
+        citations: [pinellas-em, duke-outages, fema-outages, cdc-food]
+
+  - id: during-hurricane
+    title: "During a Hurricane"
+    core_files:
+      - id: during-hurricane-guide
+        path: "core/during-hurricane/en/hurricane-guide.md"
+        media_type: "text/markdown"
+        citations: [pinellas-em, fema-hurricane, know-your-zone]
+
+  - id: flooding-storm-safety
+    title: "Flooding & Storm Safety"
+    core_files:
+      - id: flood-risk-pdf
+        path: "core/flood-storm-safety/en/Know-Your-Flood-Risk-Realtor_4-24.pdf"
+        media_type: "application/pdf"
+        citations: [pinellas-flood-risk]
+      - id: all-hazard-preparedness
+        path: "core/flood-storm-safety/en/Pinellas-County-All-Hazard-Guide.pdf"
+        media_type: "application/pdf"
+        citations: [all-hazards-preparedness-guide-pinellas]
+      - id: safety-guide
+        path: "core/flood-storm-safety/en/safety.md"
+        media_type: "text/markdown"
+        citations: [pinellas-em, fema-flood, noaa-turn-around]
+
+  - id: hurricane-first-aid
+    title: "Hurricane First Aid"
+    core_files:
+      - id: hurricane-first-aid-cdc
+        path: "core/hurricane-first-aid/en/hurricane-first-aid-cdc.pdf"
+        media_type: "application/pdf"
+        citations: [cdc-response-safety]
+      - id: hurricane-first-aid
+        path: "hurricane_disaster_response_pack/core/hurricane-first-aid/en/hurricane-first-aid.md"
+        media_type: "text/markdown"
+        citations: [fema-hurricane, cdc-flood, pinellas-em]
+
+  - id: hurricane-readiness
+    title: "Hurricane Readiness"
+    core_files:
+      - id: all-hazard-guide
+        path: "core/hurricane-readiness/en/All_Hazard_Guide-002.pdf"
+        media_type: "application/pdf"
+        citations: [all-hazards-preparedness-guide-pinellas-liberty]
+      - id: build-an-emergency-kit
+        path: "core/hurricane-readiness/en/Printable-Hurricane-Kit-Checklist_ADA_2024.pdf"
+        media_type: "application/pdf"
+        citations: [pinellas-hurricane-kit-checklist-2024]
+
+  - id: local-resources
+    title: "Local Resources"
+    core_files:
+      - id: local-resources-guide
+        path: "core/local-resources/local_resources.md"
+        media_type: "text/markdown"
+        citations: [pinellas-em, florida-em, red-cross]
+      - id: post-disaster-consumer-tips
+        path: "core/local-resources/en/Post-Disaster-Consumer-Tips_April2025_English.pdf"
+        media_type: "application/pdf"
+        citations: [pinellas-post-disaster-consumer-tips]
+
+  - id: post-hurricane
+    title: "Post Hurricane"
+    core_files:
+      - id: pr-draft-action
+        path: "core/post-hurricane/en/PR-Draft-Action-Plan-Exec-Summ-042525.pdf"
+        media_type: "application/pdf"
+        citations: [pinellas-recovery]
+      - id: fema-returning-home
+        path: "core/post-hurricane/en/Red_Cross_Flooding-ReturningHomeChecklist.pdf"
+        media_type: "application/pdf"
+        citations: [pinellas-returning-home]
+
+  - id: power-outages
+    title: "Power Outages"
+    core_files:
+      - id: power-outages-guide
+        path: "core/power-outages/en/power-outages.md"
+        media_type: "text/markdown"
+        citations: [fema-outages, cdc-food, pinellas-em]
+
+assets:
+  #Communication and Utilities
+
+  #During Hurricane
+  - id: during-storm
+    path: "assets/during-hurricane/during_storm.png"
+    media_type: "image/png"
+    image_description: "What to do during the hurricane."
+    citations: [pinellas-em]
+
+  - id: evac-zones-map
+    path: "assets/during-hurricane/evacuation_zones.png"
+    media_type: "image/png"
+    image_description: "Map of evacuation zones in Pinellas County."
+    citations: [pinellas-em]
+
+  - id: shelter-options
+    path: "assets/during-hurricane/shelter_options.png"
+    media_type: "image/png"
+    image_description: "Shelter options and instructions."
+    citations: [pinellas-em]
+
+  #Flood Storm Safety
+  - id: flood-safety
+    path: "assets/flood-storm-safety/flood_safety.png"
+    media_type: "image/png"
+    image_description: "Flood and storm surge safety guidance."
+    citations: [pinellas-em]
+
+  - id: wind-safety
+    path: "assets/flood-storm-safety/wind_safety.png"
+    media_type: "image/png"
+    image_description: "High winds and tornado safety tips."
+    citations: [pinellas-em]
+
+  #Hurricane First Aid
+  - id: hurricane-first-aid-guide
+    path: "assets/hurricane-first-aid/fema_how-to-prepare-for-hurricane-06.png"
+    media_type: "image/png"
+    image_description: "Infographic summary of Hurricane First Aid guidance from Ready.gov's 'How to Prepare for a Hurricane'."
+    citations: [ready-gov-hurricane-prep]
+
+  #Hurricane Readiness
+  - id: evacuation-map
+    path: "assets/hurricane-readiness/EvacMap-Shelters_North-1.png"
+    media_type: "image/png"
+    image_description: "Map of North Pinellas County evacuation sites and shelters from Palm Harbor Fire Department."
+    citations: [palm-harbor-evac-map]
+
+  - id: supply_checklist
+    path: "assets/hurricane-readiness/supply_checklist.png"
+    media_type: "image/png"
+    image_description: "Emergency supply kit checklist."
+    citations: [pinellas-em]
+
+  #Local Resources
+
+  #Post Hurricane
+  - id: after-storm
+    path: "assets/post-hurricane/after_storm.png"
+    media_type: "image/png"
+    image_description: "Guidance for after the storm."
+    citations: [pinellas-em]
+
+  - id: cleanup-repairs
+    path: "assets/post-hurricane/cleanup_repairs.png"
+    media_type: "image/png"
+    image_description: "Cleanup and repairs after hurricanes."
+    citations: [pinellas-em]
+
+  # Power Outages
+  - id: powert-outage-hazard-pg-1
+    path: "assets/power-outages/ready.gov_power-outage_hazard-info-sheet-1.png"
+    media_type: "image/png"
+    image_description: "Overview of outage risks and safety tips for food, generators, fire safety, and communication."
+    citations: [ready-gov-power-outage]
+
+  - id: powert-outage-hazard-pg-2
+    path: "assets/power-outages/ready.gov_power-outage_hazard-info-sheet-2.png"
+    media_type: "image/png"
+    image_description: "Step-by-step guidance on preparing before, staying safe during, and recovering after a power outage."
+    citations: [ready-gov-power-outage]
+
+
+
+
+citations:
+  - id: pinellas-em
+    title: "Pinellas County Emergency Management"
+    url: "https://pinellas.gov/emergency-information/"
+    license: "Government publication"
+
+  - id: fema-hurricane
+    title: "FEMA – Hurricane Safety"
+    url: "https://www.ready.gov/hurricanes"
+    license: "Public domain (U.S. Government)"
+
+  - id: fema-comm
+    title: "FEMA – Emergency Communication Planning"
+    url: "https://www.ready.gov/make-a-plan"
+    license: "Public domain (U.S. Government)"
+
+  - id: fema-outages
+    title: "FEMA – Power Outages"
+    url: "https://www.ready.gov/power-outages"
+    license: "Public domain (U.S. Government)"
+
+  - id: cdc-food
+    title: "CDC – Food Safety During a Power Outage"
+    url: "https://www.cdc.gov/foodsafety/food-safety-during-a-power-outage.html"
+    license: "Public domain (U.S. Government)"
+
+  - id: cdc-response-safety
+    name: "CDC NIOSH: Hurricane Response Safety for Workers"
+    url: "https://www.cdc.gov/niosh/docs/2025-106/pdfs/2025-106.pdf?id=10.26616%2FNIOSHPUB2025106"
+    license: "Public domain (U.S. Government work, 17 U.S.C. §105)"
+
+  - id: noaa-turn-around
+    title: "NOAA – Turn Around, Don’t Drown"
+    url: "https://www.weather.gov/safety/flood"
+    license: "Public domain (U.S. Government)"
+
+  - id: pinellas-flood-risk
+    title: "Pinellas County – Know Your Flood Risk"
+    url: "https://pinellas.gov/wp-content/uploads/2024/06/Know-Your-Flood-Risk-Realtor_4-24.pdf"
+    license: "Government publication"
+
+  - id: palm-harbor-evac-map
+    title: "Palm Harbor FD – Evacuation Map (North Pinellas)"
+    url: "https://www.palmharborfd.com/wp-content/uploads/2017/09/EvacMap-Shelters_North.pdf"
+    license: "All rights reserved"
+
+  - id: pinellas-recovery
+    title: "Pinellas County – Disaster Recovery Action Plan (2025)"
+    url: "https://recover.pinellas.gov/wp-content/uploads/2025/04/PR-Draft-Action-Plan-Exec-Summ-042525.pdf"
+    license: "Government publication"
+
+  - id: pinellas-returning-home
+    title: "Pinellas County – Returning Home After a Hurricane or Flood Checklist"
+    url: "https://pinellas.gov/returning-home-after-a-hurricane-or-flood-checklist/"
+    license: "Government publication"
+    
+  - id: ready-gov-hurricane-prep
+    title: "How to Prepare for a Hurricane — Ready.gov"
+    url: "https://www.ready.gov/sites/default/files/2020-03/fema_how-to-prepare-for-hurricane.pdf"
+    license: "Public domain (U.S. Government)"
+
+  - id: ready-gov-power-outage
+    title: "Be Prepared for a Power Outage — Ready.gov"
+    url: "https://www.ready.gov/sites/default/files/2024-03/ready.gov_power-outage_hazard-info-sheet.pdf"
+    license: "Public domain (U.S. Government)"
+
+  - id: red-cross
+    title: "American Red Cross – Hurricane Safety"
+    url: "https://www.redcross.org/get-help/how-to-prepare-for-emergencies/types-of-emergencies/hurricane.html"
+    license: "All rights reserved"
+
+  - id: florida-em
+    title: "Florida Division of Emergency Management"
+    url: "https://www.floridadisaster.org/"
+    license: "Government publication"
+
+  - id: duke-outages
+    title: "Duke Energy – Outage Map"
+    url: "https://outagemap.duke-energy.com"
+    license: "All rights reserved"
+
+  - id: all-hazards-preparedness-guide-pinellas
+    name: "Pinellas County: All-Hazard Preparedness Guide"
+    url: "https://palma5.com/wp-content/uploads/2018/03/Pinellas-County-All-Hazard-Guide.pdf"
+    license: "© Pinellas County Emergency Management (public information document, redistribution allowed for educational/non-commercial use)"
+
+  - id: all-hazards-preparedness-guide-pinellas-liberty
+    name: "Pinellas County: All-Hazard Preparedness Guide (Liberty copy)"
+    url: "https://www.libertemanagement.com/wp-content/uploads/All_Hazard_Guide-002.pdf"
+    license: "© Pinellas County Emergency Management (public information document, redistribution allowed for educational/non-commercial use)"
+
+  - id: pinellas-hurricane-kit-checklist-2024
+    name: "Pinellas County: Printable Hurricane Kit Checklist (2024)"
+    url: "https://pinellas.gov/wp-content/uploads/2024/08/Printable-Hurricane-Kit-Checklist_ADA_2024.pdf"
+    license: "© Pinellas County Government (public information document, redistribution allowed for educational/non-commercial use)"
+
+  - id: pinellas-post-disaster-consumer-tips
+    name: "Pinellas County: Post-Disaster Consumer Tips"
+    url: "https://pinellas.gov/post-disaster-consumer-tips/"
+    license: "© Pinellas County Government (public information webpage, redistribution allowed for educational/non-commercial use)"
