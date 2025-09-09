@@ -55,6 +55,10 @@ index_of_topics:
         path: "core/during-hurricane/en/hurricane-guide.md"
         media_type: "text/markdown"
         citations: [pinellas-em, fema-hurricane, know-your-zone]
+      - id: pinellas-shelters
+        path: "core/during-hurricane/en/pinellas-shelters.md"
+        media_type: "text/markdown"
+        citations: [pinellas-public-shelter]
 
   - id: flooding-storm-safety
     title: "Flooding & Storm Safety"
@@ -313,4 +317,9 @@ citations:
   - id: pinellas-post-disaster-consumer-tips
     name: "Pinellas County: Post-Disaster Consumer Tips"
     url: "https://pinellas.gov/post-disaster-consumer-tips/"
+    license: "© Pinellas County Government (public information webpage, redistribution allowed for educational/non-commercial use)"
+
+  - id: pinellas-public-shelters
+    name: "Pinellas County – Public Shelters"
+    url: "https://pinellas.gov/emergency-information/public-shelters/"
     license: "© Pinellas County Government (public information webpage, redistribution allowed for educational/non-commercial use)"
