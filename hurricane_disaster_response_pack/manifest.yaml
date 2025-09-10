@@ -84,7 +84,7 @@ index_of_topics:
         media_type: "application/pdf"
         citations: [cdc-response-safety]
       - id: hurricane-first-aid
-        path: "hurricane_disaster_response_pack/core/hurricane-first-aid/en/hurricane-first-aid.md"
+        path: "core/hurricane-first-aid/en/hurricane-first-aid.md"
         media_type: "text/markdown"
         citations: [fema-hurricane, cdc-flood, pinellas-em]
 
@@ -104,7 +104,7 @@ index_of_topics:
     title: "Local Resources"
     core_files:
       - id: local-resources-guide
-        path: "core/local-resources/local_resources.md"
+        path: "core/local-resources/en/local-resources.md"
         media_type: "text/markdown"
         citations: [pinellas-em, florida-em, red-cross]
       - id: post-disaster-consumer-tips
@@ -245,7 +245,7 @@ citations:
     license: "Public domain (U.S. Government)"
 
   - id: cdc-response-safety
-    name: "CDC NIOSH: Hurricane Response Safety for Workers"
+    title: "CDC NIOSH: Hurricane Response Safety for Workers"
     url: "https://www.cdc.gov/niosh/docs/2025-106/pdfs/2025-106.pdf?id=10.26616%2FNIOSHPUB2025106"
     license: "Public domain (U.S. Government work, 17 U.S.C. §105)"
 
@@ -300,26 +300,26 @@ citations:
     license: "All rights reserved"
 
   - id: all-hazards-preparedness-guide-pinellas
-    name: "Pinellas County: All-Hazard Preparedness Guide"
+    title: "Pinellas County: All-Hazard Preparedness Guide"
     url: "https://palma5.com/wp-content/uploads/2018/03/Pinellas-County-All-Hazard-Guide.pdf"
     license: "© Pinellas County Emergency Management (public information document, redistribution allowed for educational/non-commercial use)"
 
   - id: all-hazards-preparedness-guide-pinellas-liberty
-    name: "Pinellas County: All-Hazard Preparedness Guide (Liberty copy)"
+    title: "Pinellas County: All-Hazard Preparedness Guide (Liberty copy)"
     url: "https://www.libertemanagement.com/wp-content/uploads/All_Hazard_Guide-002.pdf"
     license: "© Pinellas County Emergency Management (public information document, redistribution allowed for educational/non-commercial use)"
 
   - id: pinellas-hurricane-kit-checklist-2024
-    name: "Pinellas County: Printable Hurricane Kit Checklist (2024)"
+    title: "Pinellas County: Printable Hurricane Kit Checklist (2024)"
     url: "https://pinellas.gov/wp-content/uploads/2024/08/Printable-Hurricane-Kit-Checklist_ADA_2024.pdf"
     license: "© Pinellas County Government (public information document, redistribution allowed for educational/non-commercial use)"
 
   - id: pinellas-post-disaster-consumer-tips
-    name: "Pinellas County: Post-Disaster Consumer Tips"
+    title: "Pinellas County: Post-Disaster Consumer Tips"
     url: "https://pinellas.gov/post-disaster-consumer-tips/"
     license: "© Pinellas County Government (public information webpage, redistribution allowed for educational/non-commercial use)"
 
   - id: pinellas-public-shelters
-    name: "Pinellas County – Public Shelters"
+    title: "Pinellas County – Public Shelters"
     url: "https://pinellas.gov/emergency-information/public-shelters/"
     license: "© Pinellas County Government (public information webpage, redistribution allowed for educational/non-commercial use)"

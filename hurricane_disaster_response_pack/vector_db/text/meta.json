@@ -2,7 +2,7 @@
   "model": "nomic-embed-text:v1.5",
   "dim": 512,
   "normalize": true,
-  "count": 250,
+  "count": 263,
   "pack": {
     "name": "Pinellas County – Hurricane Disaster Response",
     "version": "0.1.0",
@@ -16,5 +16,10 @@
     "approx_chars_per_token": 4,
     "chunk_size_chars": 2048,
     "overlap_chars": 256
-  }
+  },
+  "supported_media_types": [
+    "pdf",
+    "md",
+    "markdown"
+  ]
 }
