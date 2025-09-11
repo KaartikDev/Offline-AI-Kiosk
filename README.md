@@ -14,7 +14,7 @@ Built for resilience, it runs fully on modest laptops with no internet dependenc
 [![Whisper](https://img.shields.io/badge/OpenAI-Whisper-red.svg?style=flat-square&logo=openai)](https://github.com/openai/whisper)
 [![Piper](https://img.shields.io/badge/TTS-Piper-yellow.svg?style=flat-square&logo=speaker-deck)](https://github.com/rhasspy/piper)
 
-![Beacon demo](bihar demo v4 edited.gif)
+![Beacon demo](bihar%20demo%20v4%20edited.gif)
 ---
 
 ## Table of Contents
