@@ -1,0 +1,216 @@
+name: "Eastern Bihar – First Aid & Community Health | पूर्वी बिहार – प्राथमिक चिकित्सा"
+version: "0.3.1"
+date: "2025-08-23"
+locales: ["hi", "en"]
+
+embedding_config:
+  text:
+    model: "nomic-embed-text:v1.5"   
+    dim: 512                           # Granite 30m produces 384 dim vectors
+    chunking:
+      strategy: "semantic+fixed"       # we approximate this
+      max_tokens: 512
+      overlap_tokens: 64
+    normalize: true
+  images:
+    model: "nomic-embed-text:v1.5"
+    dim: 512
+    normalize: true
+
+precomputed_indices:
+  text:
+    embeddings: "vector_db/text/embeddings.jsonl"
+    meta: "vector_db/text/meta.json"
+    faiss:
+      dir: "vector_db/text/faiss_index"
+      index: "vector_db/text/faiss_index/index.faiss"
+      docstore: "vector_db/text/faiss_index/index.pkl"
+  images:
+    captions: "vector_db/images/captions.jsonl"
+    embeddings: "vector_db/images/embeddings.jsonl"
+    index: "vector_db/images/index.bin"
+    meta: "vector_db/images/meta.json"
+    faiss:
+      dir: "vector_db/images/faiss_index"
+      index: "vector_db/images/faiss_index/index.faiss"
+      docstore: "vector_db/images/faiss_index/index.pkl"
+
+index_of_topics:
+  - id: bleed-control
+    title: "Severe Bleeding Control | अत्यधिक रक्तस्राव नियंत्रण"
+    core_files:
+      - id: guide-bleed-overview
+        path: "core/bleed-control/hi_en/bleeding_control_overview.md"
+        media_type: "text/markdown"
+        bytes: 4210
+        citations: [who-bec]
+
+  - id: fracture-splint
+    title: "Suspected Fracture & Splinting | हड्डी टूटना व स्प्लिंटिंग"
+    core_files:
+      - id: guide-fracture-overview
+        path: "core/fracture-splint/hi_en/fracture_overview.md"
+        media_type: "text/markdown"
+        bytes: 3988
+        citations: [who-bec]
+
+  - id: burns
+    title: "Burns (Flame/Scald/Electrical) | जलन (आग/गर्म पानी/बिजली)"
+    core_files:
+      - id: guide-burns-dont
+        path: "core/burns/hi_en/burns_dos_and_donts.md"
+        media_type: "text/markdown"
+        bytes: 2419
+        citations: [sphere]
+
+  - id: heat-illness
+    title: "Heat Exhaustion & Heatstroke | लू व हीटस्ट्रोक"
+    core_files:
+      - id: guide-heat-overview
+        path: "core/heat-illness/hi_en/heat_illness_overview.md"
+        media_type: "text/markdown"
+        bytes: 3320
+        citations: [ndma-heat]
+
+  - id: snakebite
+    title: "Snakebite (Krait/Viper) | सर्पदंश (करैत/वायपर)"
+    core_files:
+      - id: guide-snakebite-donts
+        path: "core/snakebite/hi_en/snakebite_dos_and_donts.md"
+        media_type: "text/markdown"
+        bytes: 2104
+        citations: [who-searo-snakebite]
+
+  - id: flood-wounds
+    title: "Flood‑Related Wounds & Infection | बाढ़ के घाव व संक्रमण"
+    core_files:
+      - id: guide-flood-infection
+        path: "core/flood-wounds/hi_en/flood_infection_signs.md"
+        media_type: "text/markdown"
+        bytes: 2308
+        citations: [icmr-lepto]
+
+  - id: diarrhea-ors
+    title: "Diarrhea, ORS & Zinc | दस्त, ओआरएस व जिंक"
+    core_files:
+      - id: guide-ors-mix
+        path: "core/diarrhea-ors/hi_en/ors_homemade_recipe.md"
+        media_type: "text/markdown"
+        bytes: 1620
+        citations: [unicef-ors]
+
+  - id: choking
+    title: "Choking (Adult/Child/Infant) | गला घुटना (वयस्क/बालक/शिशु)"
+    core_files:
+      - id: guide-choking-adult
+        path: "core/choking/hi_en/choking_adult.md"
+        media_type: "text/markdown"
+        bytes: 1320
+        citations: [who-bec]
+
+  - id: cpr
+    title: "Hands‑Only CPR (Adult) | हैंड्स‑ओनली सीपीआर (वयस्क)"
+    core_files:
+      - id: guide-cpr-steps
+        path: "core/cpr/hi_en/cpr_steps.md"
+        media_type: "text/markdown"
+        bytes: 2012
+        citations: [who-bec]
+
+  - id: maternal
+    title: "Maternal Red Flags (Pre‑Referral) | मातृ आपात संकेत"
+    core_files:
+      - id: guide-maternal-signs
+        path: "core/maternal/hi_en/maternal_danger_signs.md"
+        media_type: "text/markdown"
+        bytes: 2209
+        citations: [who-bec]
+
+  - id: poisoning
+    title: "Common Poisonings (Pesticides) | सामान्य विषाक्तता (कीटनाशक)"
+    core_files:
+      - id: guide-poison-firstaid
+        path: "core/poisoning/hi_en/poisoning_first_aid.md"
+        media_type: "text/markdown"
+        bytes: 2124
+        citations: [who-bec]
+
+assets:
+  - id: img-tourniquet
+    path: "assets/bleeding/tourniquet.png"
+    media_type: "image/png"
+    bytes: 94000
+    image_description: "Step-by-step improvised tourniquet using cloth and stick. Severe Bleeding."
+    citations: [journal-trauma]
+  - id: img-splint
+    path: "assets/fracture/splint.png"
+    media_type: "image/png"
+    bytes: 115000
+    image_description: "Immobilize fractures with splint. Arm and leg. Broken bone."
+    citations: [aid-code]
+  - id: img-ors
+    path: "assets/diarrhea/ors_mixing.png"
+    media_type: "image/png"
+    bytes: 55122
+    image_description: "ORS: 6 level tsp sugar + 1/2 level tsp salt in 1 liter clean water."
+    citations: [unicef-ors]
+  - id: img-heat
+    path: "assets/heat/evap_cooling_cloth.png"
+    media_type: "image/png"
+    bytes: 60012
+    image_description: "Evaporative cooling with wet cloths to neck/armpits/groin and fanning."
+    citations: [ndma-heat, who-bec]
+  - id: img-rabies
+    path: "assets/rabies/wound_wash.png"
+    media_type: "image/png"
+    bytes: 44103
+    image_description: "Wash bite with soap and running water for 15 minutes; seek vaccination."
+    citations: [mohfw-rabies]
+  - id: img-snakebite
+    path: "assets/snakebite/no-cut-no-suck.png"
+    media_type: "image/png"
+    bytes: 53221
+    image_description: "Do NOT cut, suck, ice, or tourniquet; immobilize and transport urgently."
+    citations: [who-searo-snakebite]
+
+citations:
+  - id: who-bec
+    title: "WHO Basic Emergency Care (B.E.C.)"
+    url: "https://www.who.int/emergencycare/publications/basic-emergency-care"
+    license: "CC BY-NC-SA (verify)"
+  - id: who-searo-snakebite
+    title: "WHO SEARO – Snakebite Management"
+    url: "https://www.who.int/searo"
+    license: "Open access; verify"
+  - id: unicef-ors
+    title: "UNICEF/WHO – ORS & Zinc in Diarrhea"
+    url: "https://www.unicef.org/health"
+    license: "Open access; verify"
+  - id: ndma-flood
+    title: "NDMA India – Flood Health & Safety"
+    url: "https://ndma.gov.in"
+    license: "Open government resource; verify"
+  - id: ndma-heat
+    title: "NDMA India – Heat Wave Guidelines"
+    url: "https://ndma.gov.in"
+    license: "Open government resource; verify"
+  - id: icmr-lepto
+    title: "ICMR – Leptospirosis Guidelines"
+    url: "https://main.icmr.nic.in"
+    license: "Open access; verify"
+  - id: mohfw-rabies
+    title: "MoHFW India – Rabies Prophylaxis Guidelines"
+    url: "https://main.mohfw.gov.in"
+    license: "Open government resource; verify"
+  - id: sphere
+    title: "Sphere Handbook – Health Standards"
+    url: "https://spherestandards.org"
+    license: "Open access; verify"
+  - id: journal-trauma
+    title: "Journal of Trauma and Acute Care Surgery - DOI:10.1097/TA.0000000000000485"
+    url: "https://www.researchgate.net/publication/270003434_Improvised_tourniquets_Obsolete_or_obligatory"
+    license: "UNKNOWN SOURCE LICENSE"
+  - id: aid-code
+    title: "First Aid Splint 36 X 4.3"
+    url: "https://www.amazon.com/Aid-Splint-Emergency-Broken-Fracture/dp/B0D5WM251H?th=1"
+    license: "UNKNOWN SOURCE LICENSE"
