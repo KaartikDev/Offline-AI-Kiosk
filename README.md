@@ -47,6 +47,9 @@ This project is especially relevant for:
 - Educators or local leaders sharing essential guidance
 - Travelers in remote or offline environments
 
+Some sample conversations can be found under Beacon Media Assets Folder.
+
+
 ---
 <a id="hardware-requirements"></a>
 
@@ -329,8 +332,7 @@ OpenAI Hackathon — For the spark (and deadline!) that pushed us to build this 
 - Build **two scoped Knowledge Packs** (e.g., Bihar First Aid, Tampa Hurricane).
 - Run fully offline on local hardware.
 - Deliver a **simple live demo + static website hub mock** for packs.
-
-Sample Conversations can be found under media assets. 
+- Sample Conversations can be found under Beacon Media Assets. 
 
 ### Demo (3 min)
 [![Watch the demo](https://img.youtube.com/vi/fFMrIK-SFQ8/hqdefault.jpg)](https://youtu.be/fFMrIK-SFQ8)
