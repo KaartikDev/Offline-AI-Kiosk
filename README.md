@@ -2,7 +2,7 @@
 #  Beacon Offline Agent
 
 **Beacon Offline Agent is an offline AI assistant that uses curated Knowledge Packs to deliver trusted, local information.**  
-Built for resilience, it runs fully on modest laptops with no internet dependency, ensuring that critical guidance remains available in disaster and low-resource scenarios.
+Built for resilience, it runs fully on modest laptops with no internet dependency, ensuring that critical guidance remains available in disaster and low resource scenarios.
 
 [![gpt-oss](https://img.shields.io/badge/gpt--oss-20B-lightgrey.svg?style=flat-square&logo=openai)](https://ollama.ai/library/gpt-oss)
 [![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square&logo=open-source-initiative)](LICENSE)
@@ -15,29 +15,30 @@ Built for resilience, it runs fully on modest laptops with no internet dependenc
 [![Whisper](https://img.shields.io/badge/OpenAI-Whisper-red.svg?style=flat-square&logo=openai)](https://github.com/openai/whisper)
 [![Piper](https://img.shields.io/badge/TTS-Piper-yellow.svg?style=flat-square&logo=speaker-deck)](https://github.com/rhasspy/piper)
 
-![Beacon demo](bihar%20demo%20v4%20edited.gif)
+![Beacon demo](Beacon%20Media%20Assets/bihar%20demo%20v4%20edited.gif)
 ---
 
 ## Table of Contents
-- [📖 Introduction](#-introduction)
-- [🖥 Hardware Requirements](#-hardware-requirements)
+- [📖 Introduction](#introduction)
+- [🖥 Hardware Requirements](#hardware-requirements)
 - [🚀 Installation & Configuration](#installation--configuration)
-- [⚡ Quick Start](#-quick-start)
-- [🌳 File Tree](#-file-tree)
-- [🧠 Knowledge Packs](#-knowledge-packs)
-- [🤝 Contributing](#-contributing)
+- [⚡ Quick Start](#quick-start)
+- [🌳 File Tree](#file-tree)
+- [🧠 Knowledge Packs](#knowledge-packs)
+- [🤝 Contributing](#contributing)
 - [✍️ Acknowledgments](#acknowledgments)
-- [👾 Proof of Concept for Hackathon](#-proof-of-concept-for-hackathon)
+- [👾 Proof of Concept for Hackathon](#proof-of-concept-for-hackathon)
 - [📄 License](#license)
 
 ---
 
+<a id="introduction"></a>
 
 ## 📖 Introduction
 
 When internet or electricity goes down, people often lose access to the trusted information they need most. **Beacon Offline Agent** was created to solve this problem.  
 
-It allows communities to build and share **Knowledge Packs**—curated collections of local, verified information such as first aid guides, disaster response steps, or shelter locations. The system can run entirely **offline on a modest laptop**, so it remains useful even in low-resource or emergency settings.  
+It allows communities to build and share **Knowledge Packs** curated collections of local, verified information such as first aid guides, disaster response steps, or shelter locations. The system can run entirely **offline on a modest laptop**, so it remains useful even in low resource or emergency settings.  
 
 This project is especially relevant for:
 - Communities affected by disasters
@@ -46,14 +47,9 @@ This project is especially relevant for:
 - Educators or local leaders sharing essential guidance  
 - Travelers in remote or offline environments  
 
-🔗 **Resources**
-- [Repository](https://github.com/KaartikDev/beacon-offline-agent)  
-- [Knowledge Pack Examples](./manifests)  
-- [Demo Notebook](./FinalBeaconAgent.ipynb)  
-- [MIT License](./LICENSE)  
-
 
 ---
+<a id="hardware-requirements"></a>
 
 ## 🖥 Hardware Requirements
 
@@ -66,6 +62,7 @@ At a minimum, your system should have:
 - (Recommended) A **GPU with ≥16 GB VRAM** for faster inference  
 
 ---
+<a id="installation-config"></a>
 
 ## 🚀 Installation & Configuration
 
@@ -129,6 +126,8 @@ ollama pull nomic-embed-text:v1.5
 This may take several minutes depending on your internet speed.
 
 ---
+<a id="quick-start"></a>
+
 ## ⚡ Quick Start
 
 Follow these steps to launch the **Beacon Offline Agent** demo UI from the Jupyter notebook `FinalBeaconAgent.ipynb`, using your virtual environment kernel and a preloaded Knowledge Pack.
@@ -187,7 +186,9 @@ Open the **local URL** in your browser to use the app. If a different port is sh
   ollama list
   ```
 ---
-##🌳 File Tree
+<a id="file-tree"></a>
+
+## 🌳 File Tree
 Simplfied knowledge pack file tree
 ```
 first_aid_knowledge_pack_v3/
@@ -228,6 +229,8 @@ first_aid_knowledge_pack_v3/
     │           └── index.pkl
 ```
 ---
+<a id="knowledge-packs"></a>
+
 ## 🧠 Knowledge Packs
 
 **Knowledge Packs** are curated, domain-specific bundles of trusted, local information.  
@@ -279,6 +282,7 @@ Preview our proof-of-concept site: **[Pack Hub (mock)](https://chatgpt.com/canva
 > **Current status:** This is a UI proof-of-concept — installs from the website are not enabled yet.  
 
 ---
+<a id="contributing"></a>
 
 ## 🤝 Contributing
 
@@ -304,6 +308,7 @@ If you’re interested in helping out **or** want to **deploy Beacon** in your c
 **[mukundsk@uw.edu](mailto:mukundsk@uw.edu)**
 
 ---
+<a id="acknowledgments"></a>
 
 ## ✍️ Acknowledgments
 
@@ -318,6 +323,8 @@ Friends & family — Thank you for testing, feedback, and the moral support that
 OpenAI Hackathon — For the spark (and deadline!) that pushed us to build this idea.
 
 ---
+<a id="proof-of-concept-for-hackathon"></a>
+
 ## 👾 Proof of Concept for Hackathon
 - Identify one **target community** (rural or disaster-affected).
 - Build **two scoped Knowledge Packs** (e.g., Bihar First Aid, Tampa Hurricane).
@@ -326,6 +333,8 @@ OpenAI Hackathon — For the spark (and deadline!) that pushed us to build this 
 ### Demo (3 min)
 [![Watch the demo](https://img.youtube.com/vi/fFMrIK-SFQ8/hqdefault.jpg)](https://youtu.be/fFMrIK-SFQ8)
 ---
+<a id="license"></a>
+
 ## 📄 License
 Apache License 2.0 — see [LICENSE](./LICENSE).
 
