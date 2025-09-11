@@ -100,7 +100,6 @@ When activated, your terminal prompt should show `(venv)` at the beginning.
 ### 3. Install Python dependencies
 Update pip and install all required packages from `requirements.txt`:
 ```bash
-pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
