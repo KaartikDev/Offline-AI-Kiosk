@@ -49,7 +49,7 @@ This project is especially relevant for:
 
 
 ---
-<a id="hardware--requirements"></a>
+<a id="hardware-requirements"></a>
 
 ## 🖥 Hardware Requirements
 
@@ -62,7 +62,7 @@ At a minimum, your system should have:
 - (Recommended) A **GPU with ≥16 GB VRAM** for faster inference  
 
 ---
-<a id="installation-config"></a>
+<a id="installation--config"></a>
 
 ## 🚀 Installation & Configuration
 
