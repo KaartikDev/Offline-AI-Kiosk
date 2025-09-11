@@ -1,10 +1,11 @@
+<a name="top"></a>
 #  Beacon Offline Agent
 
 **Beacon Offline Agent is an offline AI assistant that uses curated Knowledge Packs to deliver trusted, local information.**  
 Built for resilience, it runs fully on modest laptops with no internet dependency, ensuring that critical guidance remains available in disaster and low-resource scenarios.
 
 [![gpt-oss](https://img.shields.io/badge/gpt--oss-20B-lightgrey.svg?style=flat-square&logo=openai)](https://ollama.ai/library/gpt-oss)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&logo=open-source-initiative)](LICENSE)
+[![License: Apache-2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg?style=flat-square&logo=open-source-initiative)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg?style=flat-square&logo=python)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.116-green.svg?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg?style=flat-square&logo=jupyter)](https://jupyter.org/)
@@ -18,16 +19,16 @@ Built for resilience, it runs fully on modest laptops with no internet dependenc
 ---
 
 ## Table of Contents
-- [📖 Introduction](#introduction)
-- [🖥 Hardware Requirements](#hardware-requirements)
-- [🚀 Installation & Configuration](#installation-configuration)
-- [⚡ Quick Start](#quick-start)
-- [🌳 File Tree](#file-tree)
-- [🧠 Knowledge Packs](#knowledge-packs)
-- [🤝 Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
-- [👾 Proof of Concept for Hackathon](#proof-of-concept-for-hackathon)
+- [📖 Introduction](#-introduction)
+- [🖥 Hardware Requirements](#-hardware-requirements)
+- [🚀 Installation & Configuration](#installation--configuration)
+- [⚡ Quick Start](#-quick-start)
+- [🌳 File Tree](#-file-tree)
+- [🧠 Knowledge Packs](#-knowledge-packs)
+- [🤝 Contributing](#-contributing)
+- [✍️ Acknowledgments](#acknowledgments)
+- [👾 Proof of Concept for Hackathon](#-proof-of-concept-for-hackathon)
+- [📄 License](#license)
 
 ---
 
@@ -303,11 +304,29 @@ If you’re interested in helping out **or** want to **deploy Beacon** in your c
 **[mukundsk@uw.edu](mailto:mukundsk@uw.edu)**
 
 ---
+
+## ✍️ Acknowledgments
+
+**Core team** — Kaartik Tejwani & Mukund Senthil Kumar.
+
+Community & sources — We’re grateful for publicly available guidance, maps, and data from FEMA/Ready.gov, WHO, Red Cross/IFRC, and local agencies (e.g., Pinellas County Emergency Management & Fire District, Bihar state/district administration).
+
+Open-source stack — This project stands on the shoulders of: GPT-OSS 20B (via Ollama), Whisper, Piper TTS, FastAPI, Gradio, LangChain, FAISS, Nomic-Embed, Python, and Jupyter.
+
+Friends & family — Thank you for testing, feedback, and the moral support that kept us shipping.
+
+OpenAI Hackathon — For the spark (and deadline!) that pushed us to build this idea.
+
+---
 ## 👾 Proof of Concept for Hackathon
 - Identify one **target community** (rural or disaster-affected).
 - Build **two scoped Knowledge Packs** (e.g., Bihar First Aid, Tampa Hurricane).
 - Run fully offline on local hardware.
 - Deliver a **simple live demo + static website hub mock** for packs.
-## Demo (3 min)
-
+### Demo (3 min)
 [![Watch the demo](https://img.youtube.com/vi/fFMrIK-SFQ8/hqdefault.jpg)](https://youtu.be/fFMrIK-SFQ8)
+---
+## 📄 License
+Apache License 2.0 — see [LICENSE](./LICENSE).
+
+[Back to top](#top)
