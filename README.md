@@ -49,7 +49,7 @@ This project is especially relevant for:
 
 
 ---
-<a id="hardware-requirements"></a>
+<a id="hardware--requirements"></a>
 
 ## 🖥 Hardware Requirements
 
