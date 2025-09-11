@@ -1,25 +1,192 @@
-# Offline-AI-Kiosk
+#  Beacon Offline Agent
 
-# Introduction
+**Beacon Offline Agent is an offline AI assistant that uses curated Knowledge Packs to deliver trusted, local information.**  
+Built for resilience, it runs fully on modest laptops with no internet dependency, ensuring that critical guidance remains available in disaster and low-resource scenarios.
 
-This project aims to create a **community-driven system** where people can upload, download, and share curated **Knowledge Packs**—collections of trusted, localized information designed for specific communities and situations. These packs are paired with an **offline AI agent** that can run on modest laptops and provide answers even when internet and the electric grid is unavailable.
+[![gpt-oss](https://img.shields.io/badge/gpt--oss-20B-lightgrey.svg?style=flat-square&logo=openai)](https://ollama.ai/library/gpt-oss)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&logo=open-source-initiative)](LICENSE)
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg?style=flat-square&logo=python)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.116-green.svg?style=flat-square&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg?style=flat-square&logo=jupyter)](https://jupyter.org/)
+[![Gradio](https://img.shields.io/badge/Gradio-5.44-lightblue.svg?style=flat-square&logo=gradio)](https://gradio.app/)
+[![LangChain](https://img.shields.io/badge/LangChain-0.3-purple.svg?style=flat-square&logo=chainlink)](https://www.langchain.com/)
+[![Ollama](https://img.shields.io/badge/Ollama-0.5.3-black.svg?style=flat-square&logo=llama)](https://ollama.ai/)
+[![Whisper](https://img.shields.io/badge/OpenAI-Whisper-red.svg?style=flat-square&logo=openai)](https://github.com/openai/whisper)
+[![Piper](https://img.shields.io/badge/TTS-Piper-yellow.svg?style=flat-square&logo=speaker-deck)](https://github.com/rhasspy/piper)
 
-## Core Concepts
+![Beacon demo](bihar demo v4 edited.gif)
+---
 
-### Knowledge Packs (“Dropbox for Local Knowledge”)
-- Each pack = curated, verified data for one *place × domain × scenario*.
-- Contents:
-  - **Core docs** (authoritative guidance, e.g., WHO, Red Cross).
-  - **Local overlays** (clinics, shelters, NGOs, transportation, contacts).
-  - **Citations & provenance** (sources, licenses, hashes).
-- Packs are versioned, signed, and community-maintained.
-- **Examples**:
-  - *Rural Indian Village — Basic First Aid* (nearest clinic, snakebite response).
-  - *Pinellas, FL — Post-Hurricane Response* (shelters, water safety, insurance steps).
+## Table of Contents
+- [📖 Introduction](#introduction)
+- [🖥 Hardware Requirements](#hardware-requirements)
+- [🚀 Installation & Configuration](#installation-configuration)
+- [⚡ Quick Start](#quick-start)
+- [🌳 File Tree](#file-tree)
+- [🧠 Knowledge Packs](#knowledge-packs)
+- [🤝 Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [👾 Proof of Concept for Hackathon](#proof-of-concept-for-hackathon)
 
-The AI Agent will use GPT-OSS:20B and entered into OpenAI's hackathon.
+---
 
-### File Tree
+
+## 📖 Introduction
+
+When internet or electricity goes down, people often lose access to the trusted information they need most. **Beacon Offline Agent** was created to solve this problem.  
+
+It allows communities to build and share **Knowledge Packs**—curated collections of local, verified information such as first aid guides, disaster response steps, or shelter locations. The system can run entirely **offline on a modest laptop**, so it remains useful even in low-resource or emergency settings.  
+
+This project is especially relevant for:
+- Communities affected by disasters
+- Rural regions with limited connectivity
+- Humanitarian and relief organizations
+- Educators or local leaders sharing essential guidance  
+- Travelers in remote or offline environments  
+
+🔗 **Resources**
+- [Repository](https://github.com/KaartikDev/beacon-offline-agent)  
+- [Knowledge Pack Examples](./manifests)  
+- [Demo Notebook](./FinalBeaconAgent.ipynb)  
+- [MIT License](./LICENSE)  
+
+
+---
+
+## 🖥 Hardware Requirements
+
+Beacon Offline Agent depends on running **GPT-OSS 20B** locally with Ollama.  
+This means it will **only work on laptops or desktops that can run GPT-OSS**.  
+
+At a minimum, your system should have:
+- **16 GB RAM** (required for GPT-OSS 20B with quantization)  
+- A modern **CPU** (runs slower without GPU support)  
+- (Recommended) A **GPU with ≥16 GB VRAM** for faster inference  
+
+---
+
+## 🚀 Installation & Configuration
+
+Follow these steps to set up the project.
+
+### 1. Clone the repository
+Download the project code from GitHub:
+```bash
+git clone https://github.com/KaartikDev/beacon-offline-agent.git
+cd beacon-offline-agent
+```
+
+
+
+### 2. Create and activate a virtual environment
+It is recommended to use a virtual environment to isolate dependencies.
+
+**Mac/Linux:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+
+**Windows (PowerShell):**
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+When activated, your terminal prompt should show `(venv)` at the beginning.
+
+
+### 3. Install Python dependencies
+Update pip and install all required packages from `requirements.txt`:
+```bash
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+
+### 4. Install Ollama
+Download and install Ollama for your operating system:  
+👉 [Ollama Installation Guide](https://ollama.ai/download)
+
+Verify the installation:
+```bash
+ollama --version
+```
+
+### 5. Pull required Ollama models
+This project requires:
+- **GPT-OSS 20B** (main language model)  
+- **Nomic-Embed-Text v1.5** (embedding model)  
+
+Download them with:
+```bash
+ollama pull gpt-oss:20b
+ollama pull nomic-embed-text:v1.5
+```
+
+This may take several minutes depending on your internet speed.
+
+---
+## ⚡ Quick Start
+
+Follow these steps to launch the **Beacon Offline Agent** demo UI from the Jupyter notebook `FinalBeaconAgent.ipynb`, using your virtual environment kernel and a preloaded Knowledge Pack.
+
+
+
+### 1) Open the Jupyter notebook
+- Open the **beacon-offline-agent** folder in your IDE (VS Code, PyCharm, JupyterLab, etc.).
+- Open **FinalBeaconAgent.ipynb**.
+- If prompted for an interpreter, pick your project’s **venv**.
+
+
+
+### 2) Set the notebook kernel to your venv
+In the notebook menu bar:
+- Go to **Kernel → Change kernel → Python (beacon-venv)** (or select the venv name you created).
+- If you didn’t register the kernel, choose the venv’s Python via **Kernel → Change kernel** and select the appropriate interpreter.
+
+> Tip: If you see import errors, you’re likely not using the venv. Switch the kernel and try again.
+
+
+### 3) Run all cells
+In the notebook menu bar:
+- Click **Kernel → Restart & Run All** (or **Run → Run All Cells**).  
+- Wait for all cells to finish executing (you’ll see a `*` next to a cell while it’s running).
+
+
+
+### 4) Choose a Knowledge Pack
+When prompted in the notebook, type exactly one of the following options into the input cell / prompt:
+- `FLORIDA` → **Pinellas County, Florida — Hurricane Response** kpack  
+- `INDIA` → **Bihar, India — Support** kpack
+
+The notebook will initialize the selected pack (load FAISS indices, metadata, etc.).
+
+
+
+### 5) Open the local UI
+At the end of the notebook logs you’ll see lines similar to:
+
+```
+* Running on local URL:  http://XXX.X.X.X:XXXX
+* To create a public link, set `share=True` in `launch()`.
+```
+
+Open the **local URL** in your browser to use the app. If a different port is shown, use that one.
+
+
+
+### Notes & Troubleshooting
+- If the page doesn’t load, verify the notebook finished running and that the URL/port match the printed output.
+- If the port `7860` is busy, the app may select another port automatically; use the URL printed by the notebook.
+- If you change packs, **Restart & Run All** again to reload with the new selection.
+- Make sure Ollama is running and the models are downloaded:
+  ```bash
+  ollama list
+  ```
+---
+##🌳 File Tree
 Simplfied knowledge pack file tree
 ```
 first_aid_knowledge_pack_v3/
@@ -59,51 +226,88 @@ first_aid_knowledge_pack_v3/
     │           ├── index.faiss
     │           └── index.pkl
 ```
+---
+## 🧠 Knowledge Packs
+
+**Knowledge Packs** are curated, domain-specific bundles of trusted, local information.  
+Instead of letting the LLM “make things up,” Beacon answers by running **RAG over these packs** only.
+
+**What’s inside a pack**
+- Structured metadata (`manifest.yaml`: name, version, locales, asset paths)
+- Curated sources (core docs, maps, infographics, local contacts)
+- Citations & provenance (sources, licenses, hashes)
+- Precomputed vector indices (FAISS + embeddings) for fast offline search
+
+**Agent flow (per query)**
+1. Select the appropriate pack for the user’s question
+2. Retrieve relevant chunks via **RAG** from that pack only
+3. Compose an answer grounded in those chunks  
+4. If insufficient evidence exists, respond **“I don’t know.”**
 
 
-### Device Overview:
-- Any laptop with a strong enough CPU and 16GB RAM
+### Current Packs
 
-### Knowledge Packs:
-Instead of relying on LLM agent to generate information, create a curated database of verified sources agent can pull from. Each database is called a "Knowledge Pack" and is domain specifc. Knowledge Pack will be a combination of structred JSON data + local vector store of pre-embbedded information.
+**1) Pinellas County, Florida — Hurricane Response (Kpack)**  
+- **Scope:** Evacuation/shelters, post-hurricane safety, potable water, insurance steps, local contacts  
+- **Includes:** Shelter maps, county guidance, Ready.gov/FEMA references, local numbers  
+- **Try it:** In the notebook prompt, type `FLORIDA`
 
-Agent will be fine tuned to each knowledge pack. A culture knowledge pack will also be provided.
+**2) Bihar, India — Support (Kpack)**  
+- **Scope:** First aid basics, water safety, clinic/administration contacts, rural safety tips  
+- **Includes:** Core first-aid docs, local overlays (clinics/administration), Hindi/English materials  
+- **Try it:** In the notebook prompt, type `INDIA`
 
-Agent should do the following:
-1. Understand which knowledge base can help answer query
-2. Run a RAG to get relevant chunks
-3. Build an answer using information
- - Say I don't know if its unsure
-
-
-### Usage Requirements
-- Must ground answers in **verified Knowledge Packs**, never guess.
-- Must **refuse gracefully** when outside scope.
-- Must be **simple, durable, and useful** under stress (voice-first, minimal interface).
-- Must work **offline and long-term** with swappable pack storage.
+> The notebook (`FinalBeaconAgent.ipynb`) will initialize the selected pack and load its FAISS indices.
 
 
-### Proof of Concept for Hackathon
+### ⬇️ Pack Installation (planned)
+
+Preview our proof-of-concept site: **[Pack Hub (mock)](https://chatgpt.com/canvas/shared/68bf664edce08191898c65c23b63542d)**
+
+**Buttons & behavior (planned):**
+- **Preview** — opens a details modal (Region, Domain, Locales, Size, Updated, Downloads, tags).
+- **Quick Download** — one-click download of the pack `.zip`.
+- **Download** (in modal) — same as Quick Download.
+- **Add to Device** (in modal) — sends the pack to `./knowledge_packs/<pack-name>/` on your machine (once local linking is enabled).
+- **Download Selected** — batch downloads multiple checked packs.
+- **Clear Selection** — clears current selections.
+- **Browse Packs / Create Pack** — browse catalog or start the pack creation flow.
+- **Search bar** — search by name, region, domain, or tag.
+- **Filters** — filter by Region and Locales; includes grid/list view toggle.
+
+> **Current status:** This is a UI proof-of-concept — installs from the website are not enabled yet.  
+
+---
+
+## 🤝 Contributing
+
+We’re excited to collaborate—especially on creating high-quality **Knowledge Packs** that help real communities.
+
+### Ways You Can Help (Knowledge Packs)
+- **Pick a scope:** Choose one *place × domain × scenario* (e.g., “Pinellas, FL — Post-Hurricane Response”).
+- **Curate trusted sources:** FEMA/Ready.gov/WHO/Red Cross + **local overlays** (shelters, clinics, maps, contacts).
+- **Verify licensing & cite everything:** Add source, license, and (if possible) hash in the pack manifest.
+- **Structure the pack folder:**
+  - `manifest.yaml` (name, version, date, locales, assets, citations, indices)
+  - `assets/` (pngs of images, maps, infographics)
+  - `core/` (PDF or Markdown files of human-readable guidance by topic/locale: `en/`, `hi/`, etc.)
+  - `vector_db/` (precomputed FAISS + embeddings)
+- **Build indices:** Use `textVectorDBCreation.ipynb` (and optional `imageCaptionVectorDB.ipynb`) to generate embeddings + FAISS.
+- **Follow conventions:** lowercase/kebab-case folders (e.g., `choking-cpr/`), accurate paths, clear topics, version bumps.
+- **Test locally:** Change the path and load the pack in `FinalBeaconAgent.ipynb`, run all cells, ask in-scope questions, and confirm “I don’t know” for out-of-scope.
+- **Package & share:** Zip the folder; users will place it under `./knowledge_packs/<pack-name>/`. Include a short README and changelog.
+
+### Questions, Ideas, or Deployments
+If you’re interested in helping out **or** want to **deploy Beacon** in your community/organization, please contact:  
+**[ktejwani81@ucla.edu](mailto:ktejwani81@ucla.edu)**\
+**[mukundsk@uw.edu](mailto:mukundsk@uw.edu)**
+
+---
+## 👾 Proof of Concept for Hackathon
 - Identify one **target community** (rural or disaster-affected).
 - Build **two scoped Knowledge Packs** (e.g., Bihar First Aid, Tampa Hurricane).
 - Run fully offline on local hardware.
 - Deliver a **simple live demo + static website hub mock** for packs.
+## Demo (3 min)
 
-
-
-### Dependancies
-Please use **requirments.txt** for full package list. Sample of the most important libraries.
-```
-gradio==5.44.1
-langchain==0.3.27
-langchain-community==0.3.27
-langchain-core==0.3.74
-langchain-ollama==0.3.6
-langgraph==0.6.6
-faiss-cpu==1.12.0
-pypdf==6.0.0
-PyYAML==6.0.2
-ollama==0.5.3
-requests==2.32.5
-numpy==2.2.6
-```
+[![Watch the demo](https://img.youtube.com/vi/fFMrIK-SFQ8/hqdefault.jpg)](https://youtu.be/fFMrIK-SFQ8)
