@@ -21,7 +21,7 @@ Built for resilience, it runs fully on modest laptops with no internet dependenc
 ## Table of Contents
 - [📖 Introduction](#introduction)
 - [🖥 Hardware Requirements](#hardware-requirements)
-- [🚀 Installation & Configuration](#installation--configuration)
+- [🚀 Installation & Configuration](#installation--config)
 - [⚡ Quick Start](#quick-start)
 - [🌳 File Tree](#file-tree)
 - [🧠 Knowledge Packs](#knowledge-packs)
