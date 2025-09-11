@@ -36,17 +36,16 @@ Built for resilience, it runs fully on modest laptops with no internet dependenc
 
 ## 📖 Introduction
 
-When internet or electricity goes down, people often lose access to the trusted information they need most. **Beacon Offline Agent** was created to solve this problem.  
+When internet or electricity goes down, people lose access to the information they need most. Beacon Offline Agent was built to solve this. After Hurricanes Milton and Helene in 2024, parts of Florida had no internet for weeks. In Bihar, India, 53 percent of people still lack reliable internet access. GPT OSS 20B is exceptionally powerful and has tool calling capabilties, but without local context it risks hallucinating. It cannot know which shelters are open in Pinellas County, FL or what first aid steps are safe in rural Bihar, India.
 
-It allows communities to build and share **Knowledge Packs** curated collections of local, verified information such as first aid guides, disaster response steps, or shelter locations. The system can run entirely **offline on a modest laptop**, so it remains useful even in low resource or emergency settings.  
+Beacon closes that gap with curated Knowledge Packs. These are community made bundles of documents, images, and citations that ground the model in trusted local sources. Packs can include first aid guides, disaster steps, or shelter maps, and the system runs entirely offline on a modest laptop, remaining useful even in low resource or emergency settings.
 
 This project is especially relevant for:
 - Communities affected by disasters
 - Rural regions with limited connectivity
 - Humanitarian and relief organizations
-- Educators or local leaders sharing essential guidance  
-- Travelers in remote or offline environments  
-
+- Educators or local leaders sharing essential guidance
+- Travelers in remote or offline environments
 
 ---
 <a id="hardware-requirements"></a>
@@ -330,6 +329,9 @@ OpenAI Hackathon — For the spark (and deadline!) that pushed us to build this 
 - Build **two scoped Knowledge Packs** (e.g., Bihar First Aid, Tampa Hurricane).
 - Run fully offline on local hardware.
 - Deliver a **simple live demo + static website hub mock** for packs.
+
+Sample Conversations can be found under media assets. 
+
 ### Demo (3 min)
 [![Watch the demo](https://img.youtube.com/vi/fFMrIK-SFQ8/hqdefault.jpg)](https://youtu.be/fFMrIK-SFQ8)
 ---
